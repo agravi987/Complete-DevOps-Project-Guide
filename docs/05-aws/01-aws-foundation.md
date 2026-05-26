@@ -1,4 +1,4 @@
-# ☁️ Phase 14: AWS Foundation
+# ☁️ Phase 15: AWS Foundation
 
 Goal: prepare AWS safely before deploying anything.
 

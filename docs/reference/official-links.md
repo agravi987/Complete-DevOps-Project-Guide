@@ -14,6 +14,10 @@ Use official documentation when checking versions or cloud behavior.
 
 - GitHub Actions workflow syntax: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
 
+## 📬 API Testing
+
+- Postman documentation: https://learning.postman.com/docs/
+
 ## ☁️ AWS
 
 - AWS CLI install/update: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html

@@ -27,7 +27,7 @@ By the end of this section, you will understand:
 
 ## 🧪 Matching Lab
 
-- [Lab 07: First AWS Deployment](../../hands-on/07-aws-first-deployment-lab.md)
+- [Lab 08: First AWS Deployment](../../hands-on/08-aws-first-deployment-lab.md)
 
 ## ⚠️ Cost Reminder
 

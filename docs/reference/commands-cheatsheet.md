@@ -64,6 +64,23 @@ SELECT * FROM orders;
 \q
 ```
 
+## 📬 Postman
+
+Import these files in Postman:
+
+```text
+postman/microservices-devops-api-tests.postman_collection.json
+postman/microservices-local.postman_environment.json
+```
+
+After manual testing, you can run these optional collection folders:
+
+```text
+01 Direct Local Services
+02 Gateway Routes
+03 Negative Tests
+```
+
 ## 💾 Git
 
 ```powershell

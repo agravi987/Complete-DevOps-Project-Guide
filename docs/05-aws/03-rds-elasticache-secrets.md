@@ -1,4 +1,4 @@
-# 🔐 Phase 16: RDS, ElastiCache, And Secrets
+# 🔐 Phase 17: RDS, ElastiCache, And Secrets
 
 Goal: replace local development dependencies with managed AWS services.
 

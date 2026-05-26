@@ -32,6 +32,10 @@ Serverless compute for ECS. You run containers without managing EC2 servers.
 
 An endpoint or command that tells Docker, ECS, or a load balancer whether a service is alive.
 
+## Postman
+
+An API testing tool used to send requests, inspect responses, save variables, and run test scripts.
+
 ## Load Balancer
 
 A service that receives traffic and forwards it to healthy targets.

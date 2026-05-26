@@ -101,6 +101,47 @@ http://localhost:3002/health
 http://localhost:3002/products
 ```
 
+### 📬 Test Product APIs In Postman
+
+Test health first:
+
+| Field | Value |
+| --- | --- |
+| Method | `GET` |
+| URL | `http://localhost:3002/health` |
+| Body | None |
+
+Expected:
+
+```json
+{
+  "service": "product-service",
+  "status": "OK"
+}
+```
+
+Then test product list:
+
+| Field | Value |
+| --- | --- |
+| Method | `GET` |
+| URL | `http://localhost:3002/products` |
+| Body | None |
+
+Expected:
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "price": 75000
+  }
+]
+```
+
+Your response will include more products. That is correct.
+
 Stop with `Ctrl+C`.
 
 ## 🧾 Order Service
@@ -211,6 +252,71 @@ List orders:
 
 ```powershell
 Invoke-RestMethod http://localhost:3003/orders
+```
+
+### 📬 Test Order APIs In Postman
+
+Test health first:
+
+| Field | Value |
+| --- | --- |
+| Method | `GET` |
+| URL | `http://localhost:3003/health` |
+| Body | None |
+
+Expected:
+
+```json
+{
+  "service": "order-service",
+  "status": "OK"
+}
+```
+
+Create order:
+
+| Field | Value |
+| --- | --- |
+| Method | `POST` |
+| URL | `http://localhost:3003/orders` |
+| Body type | `raw` -> `JSON` |
+
+Body:
+
+```json
+{
+  "userId": 1,
+  "productId": 1,
+  "quantity": 2
+}
+```
+
+Expected status:
+
+```text
+201 Created
+```
+
+List orders:
+
+| Field | Value |
+| --- | --- |
+| Method | `GET` |
+| URL | `http://localhost:3003/orders` |
+| Body | None |
+
+Expected:
+
+```json
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "productId": 1,
+    "quantity": 2,
+    "status": "CREATED"
+  }
+]
 ```
 
 Stop with `Ctrl+C`.

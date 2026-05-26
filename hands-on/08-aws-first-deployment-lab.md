@@ -1,4 +1,4 @@
-# 🧪 Lab 07: First AWS Deployment
+# 🧪 Lab 08: First AWS Deployment
 
 ## 🎯 Objective
 
@@ -15,7 +15,7 @@ Before starting:
 - Create a budget alert.
 - Use one region.
 - Delete resources after the lab.
-- Follow [../docs/04-aws/04-cleanup.md](../docs/04-aws/04-cleanup.md).
+- Follow [../docs/05-aws/04-cleanup.md](../docs/05-aws/04-cleanup.md).
 
 ## 🧰 Tools
 
@@ -69,7 +69,7 @@ aws ecs create-cluster `
 
 Continue the ECS task and service setup from:
 
-[../docs/04-aws/02-ecr-and-ecs-fargate.md](../docs/04-aws/02-ecr-and-ecs-fargate.md)
+[../docs/05-aws/02-ecr-and-ecs-fargate.md](../docs/05-aws/02-ecr-and-ecs-fargate.md)
 
 ## ✅ Expected Output
 
@@ -117,6 +117,6 @@ Check CloudWatch logs and confirm the service started.
 
 Follow:
 
-[../docs/04-aws/04-cleanup.md](../docs/04-aws/04-cleanup.md)
+[../docs/05-aws/04-cleanup.md](../docs/05-aws/04-cleanup.md)
 
 Do not leave practice resources running.

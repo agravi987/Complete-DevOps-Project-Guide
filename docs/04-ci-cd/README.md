@@ -21,7 +21,7 @@ By the end of this section, you will have:
 
 ## 🧪 Matching Lab
 
-- [Lab 06: GitHub Actions CI](../../hands-on/06-ci-cd-lab.md)
+- [Lab 07: GitHub Actions CI](../../hands-on/07-ci-cd-lab.md)
 
 ## ✅ Section Checkpoint
 

@@ -151,6 +151,67 @@ Invoke-RestMethod `
   -Body '{"userId":1,"productId":1,"quantity":2}'
 ```
 
+## 📬 Test Gateway One Request At A Time In Postman
+
+Do not run every request at once while learning. Test in this order.
+
+### 1. Auth health through gateway
+
+| Field | Value |
+| --- | --- |
+| Method | `GET` |
+| URL | `http://localhost:8080/api/auth/health` |
+
+Expected:
+
+```json
+{
+  "service": "auth-service",
+  "status": "OK"
+}
+```
+
+### 2. List products through gateway
+
+| Field | Value |
+| --- | --- |
+| Method | `GET` |
+| URL | `http://localhost:8080/api/products` |
+
+Expected:
+
+```text
+200 OK
+```
+
+The response should be a product array.
+
+### 3. Create order through gateway
+
+| Field | Value |
+| --- | --- |
+| Method | `POST` |
+| URL | `http://localhost:8080/api/orders` |
+| Body type | `raw` -> `JSON` |
+
+Body:
+
+```json
+{
+  "userId": 1,
+  "productId": 1,
+  "quantity": 2
+}
+```
+
+Expected:
+
+```text
+201 Created
+```
+
+If direct service URLs work but gateway URLs fail, check `gateway/nginx.conf`.
+
 ## 🧠 Why The Gateway Matters
 
 Without a gateway:

@@ -24,6 +24,16 @@ Use this page to track your DevOps project progress.
 - [ ] Connected services to PostgreSQL
 - [ ] Added Redis caching
 
+## 🧪 API Testing
+
+- [ ] Tested auth health in Postman
+- [ ] Tested register in Postman
+- [ ] Tested login in Postman
+- [ ] Tested product list in Postman
+- [ ] Tested create order in Postman
+- [ ] Tested gateway product route in Postman
+- [ ] Imported optional Postman collection after manual testing
+
 ## 🚀 Git And CI/CD
 
 - [ ] Pushed project to GitHub

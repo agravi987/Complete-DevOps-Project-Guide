@@ -1,4 +1,4 @@
-# 🧹 Phase 17: AWS Cleanup
+# 🧹 Phase 18: AWS Cleanup
 
 Goal: remove AWS resources when you finish practicing.
 

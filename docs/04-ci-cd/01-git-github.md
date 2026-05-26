@@ -1,4 +1,4 @@
-# 💾 Phase 12: Git And GitHub
+# 💾 Phase 13: Git And GitHub
 
 Goal: save your project history locally and push it to GitHub.
 

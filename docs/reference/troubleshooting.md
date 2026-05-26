@@ -118,6 +118,35 @@ docker compose build frontend
 docker compose up -d frontend
 ```
 
+## 📬 Postman Variables Not Replaced
+
+Symptom:
+
+```text
+{{gatewayBaseUrl}}/api/products
+```
+
+appears in the request URL or the request fails immediately.
+
+Fix:
+
+1. Import `postman/microservices-local.postman_environment.json`.
+2. Select `Microservices Local` in the Postman environment dropdown.
+3. Run the request again.
+
+## 📬 Postman Register Returns 409
+
+This means the test user already exists.
+
+This is not always a problem. Continue with login.
+
+To create a fresh user:
+
+1. Open the Postman environment.
+2. Change `userEmail`.
+3. Save the environment.
+4. Run Register User again.
+
 ## 🔐 AWS ECR Login Fails
 
 Check:

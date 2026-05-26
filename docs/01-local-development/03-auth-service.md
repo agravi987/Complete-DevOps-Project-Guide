@@ -210,7 +210,111 @@ http://localhost:3001
 http://localhost:3001/health
 ```
 
-## 🧪 Test With PowerShell
+## 📬 Test In Postman: Health API
+
+Do this before testing register or login.
+
+In Postman:
+
+| Field | Value |
+| --- | --- |
+| Method | `GET` |
+| URL | `http://localhost:3001/health` |
+| Body | None |
+
+Click `Send`.
+
+Expected response:
+
+```json
+{
+  "service": "auth-service",
+  "status": "OK"
+}
+```
+
+If this does not work, do not continue yet. First check that `npm run dev` is still running.
+
+## 📬 Test In Postman: Register API
+
+Create a new Postman request:
+
+| Field | Value |
+| --- | --- |
+| Method | `POST` |
+| URL | `http://localhost:3001/auth/register` |
+| Body type | `raw` -> `JSON` |
+
+Body:
+
+```json
+{
+  "name": "Ravi",
+  "email": "ravi@example.com",
+  "password": "password123"
+}
+```
+
+Expected status:
+
+```text
+201 Created
+```
+
+Expected response:
+
+```json
+{
+  "id": 1,
+  "name": "Ravi",
+  "email": "ravi@example.com"
+}
+```
+
+If you run the same request again, you may get:
+
+```text
+409 Conflict
+```
+
+That means the user already exists. That is okay.
+
+## 📬 Test In Postman: Login API
+
+Create another Postman request:
+
+| Field | Value |
+| --- | --- |
+| Method | `POST` |
+| URL | `http://localhost:3001/auth/login` |
+| Body type | `raw` -> `JSON` |
+
+Body:
+
+```json
+{
+  "email": "ravi@example.com",
+  "password": "password123"
+}
+```
+
+Expected status:
+
+```text
+200 OK
+```
+
+Expected response:
+
+```json
+{
+  "token": "long.jwt.token"
+}
+```
+
+You do not need to understand JWT deeply yet. For now, just confirm that a token is returned.
+
+## 🧪 Optional: Test With PowerShell
 
 Register:
 
@@ -231,6 +335,10 @@ Invoke-RestMethod `
   -ContentType "application/json" `
   -Body '{"email":"ravi@example.com","password":"password123"}'
 ```
+
+Beginner tip:
+
+Use Postman while learning. Use PowerShell later when you want faster terminal testing.
 
 ## 💾 Commit
 
