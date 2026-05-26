@@ -2,6 +2,10 @@
 
 This section shows how the local project can grow into an AWS deployment.
 
+Before starting AWS, complete the local Kubernetes section:
+
+[../04-kubernetes/README.md](../04-kubernetes/README.md)
+
 ## 🎯 Goal
 
 By the end of this section, you will understand:
@@ -27,7 +31,7 @@ By the end of this section, you will understand:
 
 ## 🧪 Matching Lab
 
-- [Lab 08: First AWS Deployment](../../hands-on/08-aws-first-deployment-lab.md)
+- [Lab 09: First AWS Deployment](../../hands-on/09-aws-first-deployment-lab.md)
 
 ## ⚠️ Cost Reminder
 

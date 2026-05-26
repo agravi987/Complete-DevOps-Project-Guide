@@ -12,9 +12,10 @@ Use this folder like a DevOps project book. Each section has a clear purpose, a 
 | 2 | [01-local-development](01-local-development/README.md) | Build the project locally on Windows |
 | 3 | [02-containers](02-containers/README.md) | Docker, Compose, database, cache, gateway |
 | 4 | [03-api-testing](03-api-testing/README.md) | Postman API testing with real checks |
-| 5 | [04-ci-cd](04-ci-cd/README.md) | GitHub workflow and automated checks |
-| 6 | [05-aws](05-aws/README.md) | AWS deployment path and cleanup |
-| 7 | [reference](reference/README.md) | Commands, troubleshooting, glossary, links |
+| 5 | [04-kubernetes](04-kubernetes/README.md) | Local Kubernetes deployment in Docker Desktop |
+| 6 | [05-ci-cd](05-ci-cd/README.md) | GitHub workflow and automated checks |
+| 7 | [06-aws](06-aws/README.md) | AWS deployment path and cleanup |
+| 8 | [reference](reference/README.md) | Commands, troubleshooting, glossary, links |
 
 ## 🧪 For Hands-On Practice
 

@@ -4,7 +4,7 @@ Welcome to your **hands-on DevOps project reference**.
 
 This repo is built for a beginner who wants to actually do the project, not just read theory.
 
-You will build the project locally on Windows first, then add Docker, Postman API testing, CI/CD, and AWS step by step.
+You will build the project locally on Windows first, then add Docker, Postman API testing, local Kubernetes, CI/CD, and AWS step by step.
 
 ## 🧭 What Should I Do First?
 
@@ -32,6 +32,7 @@ You will build a real microservice DevOps project:
 | Containers | Docker | Packages each service |
 | Local Infra | Docker Compose | Runs the full stack locally |
 | API Testing | Postman | Tests APIs with saved variables |
+| Local Orchestration | Kubernetes in Docker Desktop | Tests deployment before cloud |
 | CI/CD | GitHub Actions | Checks code and Docker builds |
 | Cloud | AWS | ECR, ECS Fargate, RDS, ElastiCache, Secrets Manager |
 
@@ -69,8 +70,9 @@ Detailed architecture:
 |   |-- 01-local-development/
 |   |-- 02-containers/
 |   |-- 03-api-testing/
-|   |-- 04-ci-cd/
-|   |-- 05-aws/
+|   |-- 04-kubernetes/
+|   |-- 05-ci-cd/
+|   |-- 06-aws/
 |   `-- reference/
 |
 |-- hands-on/
@@ -80,8 +82,12 @@ Detailed architecture:
 |   |-- 04-nginx-gateway-lab.md
 |   |-- 05-database-and-cache-lab.md
 |   |-- 06-postman-api-testing-lab.md
-|   |-- 07-ci-cd-lab.md
-|   `-- 08-aws-first-deployment-lab.md
+|   |-- 07-local-kubernetes-lab.md
+|   |-- 08-ci-cd-lab.md
+|   `-- 09-aws-first-deployment-lab.md
+|
+|-- kubernetes/
+|   `-- local/
 |
 `-- templates/
     |-- aws/
@@ -107,12 +113,14 @@ Follow the phases in order.
 | 10 | [Database Integration](docs/02-containers/05-database-integration.md) | Persist data |
 | 11 | [Redis Caching](docs/02-containers/06-redis-cache.md) | Cache products |
 | 12 | [Postman API Testing](docs/03-api-testing/01-postman-api-testing.md) | Run API tests |
-| 13 | [Git and GitHub](docs/04-ci-cd/01-git-github.md) | Push code |
-| 14 | [GitHub Actions CI](docs/04-ci-cd/02-github-actions-ci.md) | Automate checks |
-| 15 | [AWS Foundation](docs/05-aws/01-aws-foundation.md) | Prepare AWS safely |
-| 16 | [ECR and ECS Fargate](docs/05-aws/02-ecr-and-ecs-fargate.md) | Deploy first container |
-| 17 | [RDS, Redis, Secrets](docs/05-aws/03-rds-elasticache-secrets.md) | Use managed services |
-| 18 | [AWS Cleanup](docs/05-aws/04-cleanup.md) | Stop cloud costs |
+| 13 | [Enable Kubernetes](docs/04-kubernetes/01-docker-desktop-kubernetes.md) | Prepare Docker Desktop Kubernetes |
+| 14 | [Local Kubernetes Deployment](docs/04-kubernetes/02-local-kubernetes-deployment.md) | Deploy locally with Kubernetes |
+| 15 | [Git and GitHub](docs/05-ci-cd/01-git-github.md) | Push code |
+| 16 | [GitHub Actions CI](docs/05-ci-cd/02-github-actions-ci.md) | Automate checks |
+| 17 | [AWS Foundation](docs/06-aws/01-aws-foundation.md) | Prepare AWS safely |
+| 18 | [ECR and ECS Fargate](docs/06-aws/02-ecr-and-ecs-fargate.md) | Deploy first container |
+| 19 | [RDS, Redis, Secrets](docs/06-aws/03-rds-elasticache-secrets.md) | Use managed services |
+| 20 | [AWS Cleanup](docs/06-aws/04-cleanup.md) | Stop cloud costs |
 
 ## 🧪 Real Hands-On Labs
 
@@ -126,8 +134,9 @@ Use these labs when you want to practice:
 | 04 | [Nginx Gateway](hands-on/04-nginx-gateway-lab.md) | APIs work through gateway |
 | 05 | [Database And Cache](hands-on/05-database-and-cache-lab.md) | PostgreSQL and Redis used |
 | 06 | [Postman API Testing](hands-on/06-postman-api-testing-lab.md) | API tests pass |
-| 07 | [CI/CD](hands-on/07-ci-cd-lab.md) | GitHub Actions runs |
-| 08 | [AWS First Deployment](hands-on/08-aws-first-deployment-lab.md) | First ECS task runs |
+| 07 | [Local Kubernetes](hands-on/07-local-kubernetes-lab.md) | App runs in Docker Desktop Kubernetes |
+| 08 | [CI/CD](hands-on/08-ci-cd-lab.md) | GitHub Actions runs |
+| 09 | [AWS First Deployment](hands-on/09-aws-first-deployment-lab.md) | First ECS task runs |
 
 ## 📬 Postman API Testing Included
 

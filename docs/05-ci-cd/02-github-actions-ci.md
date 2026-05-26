@@ -1,4 +1,4 @@
-# 🚀 Phase 14: GitHub Actions CI
+# 🚀 Phase 16: GitHub Actions CI
 
 Goal: make GitHub automatically check your project when code is pushed.
 

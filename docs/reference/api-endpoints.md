@@ -36,6 +36,18 @@ These work through Nginx.
 | Order | `POST` | `http://localhost:8080/api/orders` | Create order through gateway |
 | Order | `GET` | `http://localhost:8080/api/orders` | List orders through gateway |
 
+## ☸️ Kubernetes Gateway URLs
+
+These work after deploying to Docker Desktop Kubernetes.
+
+| Service | Method | URL | Purpose |
+| --- | --- | --- | --- |
+| Frontend | `GET` | `http://localhost:30080` | React app through Kubernetes |
+| Auth | `GET` | `http://localhost:30080/api/auth/health` | Auth health through Kubernetes gateway |
+| Product | `GET` | `http://localhost:30080/api/products` | List products through Kubernetes gateway |
+| Order | `POST` | `http://localhost:30080/api/orders` | Create order through Kubernetes gateway |
+| Order | `GET` | `http://localhost:30080/api/orders` | List orders through Kubernetes gateway |
+
 ## 🧪 Example Request Bodies
 
 Register:

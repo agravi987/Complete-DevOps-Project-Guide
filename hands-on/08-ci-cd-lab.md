@@ -1,4 +1,4 @@
-# 🧪 Lab 07: CI/CD With GitHub Actions
+# 🧪 Lab 08: CI/CD With GitHub Actions
 
 ## 🎯 Objective
 

@@ -148,6 +148,67 @@ To create a fresh user:
 3. Save the environment.
 4. Run Register User again.
 
+## ☸️ kubectl Cannot Find The Cluster
+
+Check your current context:
+
+```powershell
+kubectl config current-context
+kubectl config get-contexts
+```
+
+Switch to Docker Desktop:
+
+```powershell
+kubectl config use-context docker-desktop
+kubectl get nodes
+```
+
+If `docker-desktop` does not exist, enable Kubernetes in Docker Desktop settings.
+
+## ☸️ Kubernetes Pod Shows ImagePullBackOff
+
+Cause:
+
+Kubernetes cannot find the local image.
+
+Fix:
+
+Build the local image with the exact name used in the manifest:
+
+```powershell
+docker build -t auth-service:local .\services\auth-service
+docker build -t product-service:local .\services\product-service
+docker build -t order-service:local .\services\order-service
+docker build -t microservices-frontend:local .\frontend
+```
+
+Then restart the deployment:
+
+```powershell
+kubectl rollout restart deployment/auth-service -n microservices-local
+```
+
+## ☸️ Kubernetes Gateway Does Not Open
+
+Check the gateway service:
+
+```powershell
+kubectl get svc -n microservices-local
+```
+
+You should see:
+
+```text
+gateway   NodePort   ...   80:30080/TCP
+```
+
+Then open:
+
+```text
+http://localhost:30080
+```
+
 ## 🔐 AWS ECR Login Fails
 
 Check:

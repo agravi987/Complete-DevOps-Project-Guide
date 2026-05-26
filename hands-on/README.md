@@ -22,8 +22,9 @@ Each lab is designed like a real DevOps task:
 | 04 | [Nginx Gateway Lab](04-nginx-gateway-lab.md) | Route all traffic through one entry point |
 | 05 | [Database And Cache Lab](05-database-and-cache-lab.md) | Persist data and use Redis |
 | 06 | [Postman API Testing Lab](06-postman-api-testing-lab.md) | Test APIs visually |
-| 07 | [CI/CD Lab](07-ci-cd-lab.md) | Add GitHub Actions |
-| 08 | [AWS First Deployment Lab](08-aws-first-deployment-lab.md) | Push image and run first ECS task |
+| 07 | [Local Kubernetes Lab](07-local-kubernetes-lab.md) | Deploy locally with Docker Desktop Kubernetes |
+| 08 | [CI/CD Lab](08-ci-cd-lab.md) | Add GitHub Actions |
+| 09 | [AWS First Deployment Lab](09-aws-first-deployment-lab.md) | Push image and run first ECS task |
 
 ## 🧠 How To Use These Labs
 

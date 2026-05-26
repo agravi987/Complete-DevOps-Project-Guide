@@ -1,4 +1,4 @@
-# 🚢 Phase 16: ECR And ECS Fargate
+# 🚢 Phase 18: ECR And ECS Fargate
 
 Goal: push Docker images to Amazon ECR and run containers on ECS Fargate.
 

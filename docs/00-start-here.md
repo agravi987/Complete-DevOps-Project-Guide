@@ -2,7 +2,7 @@
 
 This guide teaches DevOps through one complete project.
 
-You will start with a simple local application and slowly add the real-world pieces around it: Docker, databases, cache, gateway, Postman testing, CI/CD, and AWS.
+You will start with a simple local application and slowly add the real-world pieces around it: Docker, databases, cache, gateway, Postman testing, local Kubernetes, CI/CD, and AWS.
 
 ## 🎯 What This Repo Is
 
@@ -22,6 +22,7 @@ Setup tools
   -> Add Docker
   -> Add database and cache
   -> Test APIs in Postman
+  -> Deploy locally with Kubernetes
   -> Add CI/CD
   -> Deploy first container to AWS
 ```
@@ -67,9 +68,10 @@ Do not start with AWS. A good DevOps workflow is:
 2. Containerize it.
 3. Run all services together locally.
 4. Test APIs with Postman.
-5. Add CI checks.
-6. Deploy to AWS.
-7. Add monitoring, security, and cleanup.
+5. Deploy locally with Kubernetes.
+6. Add CI checks.
+7. Deploy to AWS.
+8. Add monitoring, security, and cleanup.
 
 That order keeps the learning clear.
 
@@ -94,6 +96,7 @@ At the end, you should be able to explain:
 - How services talk to each other in Docker Compose
 - Why an API gateway exists
 - How to test APIs in Postman
+- How to deploy locally using Kubernetes in Docker Desktop
 - How CI catches mistakes
 - How container images move from your laptop to AWS
 - Why AWS managed services are used for database, cache, secrets, and logs

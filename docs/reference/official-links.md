@@ -9,6 +9,15 @@ Use official documentation when checking versions or cloud behavior.
 - Docker Desktop WSL 2 backend: https://docs.docker.com/desktop/features/wsl/
 - Docker Compose: https://docs.docker.com/compose/
 - Docker Compose networking: https://docs.docker.com/compose/how-tos/networking/
+- Docker Desktop Kubernetes: https://docs.docker.com/desktop/features/kubernetes/
+- kubectl on Windows: https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
+
+## ☸️ Kubernetes
+
+- Deployments: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+- Services: https://kubernetes.io/docs/concepts/services-networking/service/
+- ConfigMaps: https://kubernetes.io/docs/concepts/configuration/configmap/
+- Secrets: https://kubernetes.io/docs/concepts/configuration/secret/
 
 ## 💾 GitHub
 

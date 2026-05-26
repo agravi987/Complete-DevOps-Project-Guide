@@ -12,6 +12,7 @@ Install these first:
 | Git | Version control |
 | Node.js 24 LTS | Runtime for React and Express services |
 | Docker Desktop | Run containers locally |
+| kubectl | Control local Kubernetes from PowerShell |
 | Postman or Thunder Client | Test APIs from a friendly UI |
 | GitHub account | Store your code and run CI later |
 
@@ -32,6 +33,7 @@ npm --version
 git --version
 docker --version
 docker compose version
+kubectl version --client
 code --version
 ```
 
@@ -40,6 +42,7 @@ Expected result:
 - `node --version` should show Node.js 24.x or another current even-numbered LTS version.
 - `docker compose version` should work with a space between `docker` and `compose`.
 - Docker Desktop must be running before Docker commands work.
+- `kubectl` is used later for Docker Desktop Kubernetes.
 
 ## 🐳 Docker Desktop On Windows
 

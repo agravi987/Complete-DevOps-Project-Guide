@@ -2,6 +2,8 @@
 
 This section adds GitHub and automation.
 
+Do this after the local Kubernetes deployment works. That way CI/CD is checking a project you already know can run locally.
+
 ## 🎯 Goal
 
 By the end of this section, you will have:
@@ -21,7 +23,7 @@ By the end of this section, you will have:
 
 ## 🧪 Matching Lab
 
-- [Lab 07: GitHub Actions CI](../../hands-on/07-ci-cd-lab.md)
+- [Lab 08: GitHub Actions CI](../../hands-on/08-ci-cd-lab.md)
 
 ## ✅ Section Checkpoint
 

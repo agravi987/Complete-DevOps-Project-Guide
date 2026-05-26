@@ -77,6 +77,18 @@ POST http://localhost:3003/orders
 GET http://localhost:8080/api/products
 ```
 
+## ☸️ Kubernetes
+
+```powershell
+kubectl config use-context docker-desktop
+kubectl get nodes
+kubectl apply -f .\kubernetes\local
+kubectl get pods -n microservices-local
+kubectl get svc -n microservices-local
+kubectl logs deployment/gateway -n microservices-local
+kubectl delete namespace microservices-local
+```
+
 ## 💾 Git
 
 ```powershell

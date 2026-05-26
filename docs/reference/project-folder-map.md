@@ -48,6 +48,15 @@ microservices-project/
     init/
       01-create-tables.sql
 
+  kubernetes/
+    local/
+      00-namespace.yaml
+      01-config-and-secrets.yaml
+      02-postgres.yaml
+      03-redis.yaml
+      04-backend-services.yaml
+      05-frontend-and-gateway.yaml
+
   .github/
     workflows/
       ci.yml
@@ -67,6 +76,7 @@ microservices-project/
 | `gateway/` | Nginx reverse proxy and API entry point |
 | `services/` | All backend microservices |
 | `database/init/` | SQL scripts used when PostgreSQL starts |
+| `kubernetes/local/` | Local Kubernetes manifests for Docker Desktop |
 | `.github/workflows/` | GitHub Actions CI workflows |
 
 ## 📄 What Each Root File Means

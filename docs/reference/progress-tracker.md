@@ -32,7 +32,16 @@ Use this page to track your DevOps project progress.
 - [ ] Tested product list in Postman
 - [ ] Tested create order in Postman
 - [ ] Tested gateway product route in Postman
-- [ ] Imported optional Postman collection after manual testing
+
+## ☸️ Local Kubernetes
+
+- [ ] Enabled Kubernetes in Docker Desktop
+- [ ] Verified `kubectl get nodes`
+- [ ] Built local Docker images
+- [ ] Applied `kubernetes/local` manifests
+- [ ] Verified pods in `microservices-local`
+- [ ] Tested gateway at `http://localhost:30080`
+- [ ] Checked pod logs with `kubectl logs`
 
 ## 🚀 Git And CI/CD
 
@@ -62,6 +71,7 @@ After finishing, practice explaining:
 - [ ] Why Docker Compose uses service names
 - [ ] Why Nginx gateway is useful
 - [ ] How CI catches mistakes
+- [ ] Why Kubernetes uses Deployments and Services
 - [ ] How images move from local machine to AWS
 - [ ] Why secrets should not be committed
 - [ ] How to debug a failed container

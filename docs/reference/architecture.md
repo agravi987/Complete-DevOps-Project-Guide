@@ -52,6 +52,42 @@ From your Windows browser, you still use `localhost` because the browser is outs
 http://localhost:8080
 ```
 
+## ☸️ Local Kubernetes Architecture
+
+Docker Desktop Kubernetes uses the same app pieces, but Kubernetes manages them with Deployments and Services.
+
+```text
+User Browser
+  |
+  | http://localhost:30080
+  v
+gateway Service (NodePort)
+  |
+  v
+gateway Deployment / Nginx Pod
+  |
+  +-- auth-service Service    -> auth-service Pod
+  +-- product-service Service -> product-service Pod
+  +-- order-service Service   -> order-service Pod
+  +-- frontend Service        -> frontend Pod
+
+backend Pods
+  |
+  +-- postgres Service -> postgres Pod + PVC
+  +-- redis Service    -> redis Pod
+```
+
+Important Kubernetes rule:
+
+Pods should talk to other apps through Kubernetes Service names.
+
+Examples:
+
+```text
+POSTGRES_HOST=postgres
+REDIS_HOST=redis
+```
+
 ## ☁️ AWS Architecture Later
 
 The AWS version follows the same idea:

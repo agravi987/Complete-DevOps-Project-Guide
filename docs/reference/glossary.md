@@ -32,6 +32,34 @@ Serverless compute for ECS. You run containers without managing EC2 servers.
 
 An endpoint or command that tells Docker, ECS, or a load balancer whether a service is alive.
 
+## Kubernetes
+
+A container orchestration platform that runs and manages containers using objects such as Pods, Deployments, and Services.
+
+## Deployment
+
+A Kubernetes object that keeps the desired number of application pods running.
+
+## Pod
+
+The smallest deployable unit in Kubernetes. A pod usually runs one application container.
+
+## Service
+
+A Kubernetes object that gives pods a stable network name and port.
+
+## ConfigMap
+
+A Kubernetes object for non-secret configuration values.
+
+## Secret
+
+A Kubernetes object for sensitive values such as passwords and tokens.
+
+## NodePort
+
+A Kubernetes Service type that exposes an application on a port of the local cluster node.
+
 ## Postman
 
 An API testing tool used to send requests, inspect responses, save variables, and run test scripts.

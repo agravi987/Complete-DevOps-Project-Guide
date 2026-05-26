@@ -91,16 +91,30 @@ Do:
 
 Goal:
 
-- Import collection
-- Run API tests
-- Understand saved variables
+- Test one API at a time
+- Understand status codes
+- Test gateway APIs
 
 Do:
 
 - [docs/03-api-testing/01-postman-api-testing.md](../03-api-testing/01-postman-api-testing.md)
 - [hands-on/06-postman-api-testing-lab.md](../../hands-on/06-postman-api-testing-lab.md)
 
-## Day 9: CI/CD
+## Day 9: Local Kubernetes
+
+Goal:
+
+- Enable Docker Desktop Kubernetes
+- Deploy the stack locally with `kubectl`
+- Test the app through `localhost:30080`
+
+Do:
+
+- [docs/04-kubernetes/01-docker-desktop-kubernetes.md](../04-kubernetes/01-docker-desktop-kubernetes.md)
+- [docs/04-kubernetes/02-local-kubernetes-deployment.md](../04-kubernetes/02-local-kubernetes-deployment.md)
+- [hands-on/07-local-kubernetes-lab.md](../../hands-on/07-local-kubernetes-lab.md)
+
+## Day 10: CI/CD
 
 Goal:
 
@@ -109,11 +123,11 @@ Goal:
 
 Do:
 
-- [docs/04-ci-cd/01-git-github.md](../04-ci-cd/01-git-github.md)
-- [docs/04-ci-cd/02-github-actions-ci.md](../04-ci-cd/02-github-actions-ci.md)
-- [hands-on/07-ci-cd-lab.md](../../hands-on/07-ci-cd-lab.md)
+- [docs/05-ci-cd/01-git-github.md](../05-ci-cd/01-git-github.md)
+- [docs/05-ci-cd/02-github-actions-ci.md](../05-ci-cd/02-github-actions-ci.md)
+- [hands-on/08-ci-cd-lab.md](../../hands-on/08-ci-cd-lab.md)
 
-## Day 10: AWS First Deployment
+## Day 11: AWS First Deployment
 
 Goal:
 
@@ -123,7 +137,7 @@ Goal:
 
 Do:
 
-- [docs/05-aws/01-aws-foundation.md](../05-aws/01-aws-foundation.md)
-- [docs/05-aws/02-ecr-and-ecs-fargate.md](../05-aws/02-ecr-and-ecs-fargate.md)
-- [hands-on/08-aws-first-deployment-lab.md](../../hands-on/08-aws-first-deployment-lab.md)
-- [docs/05-aws/04-cleanup.md](../05-aws/04-cleanup.md)
+- [docs/06-aws/01-aws-foundation.md](../06-aws/01-aws-foundation.md)
+- [docs/06-aws/02-ecr-and-ecs-fargate.md](../06-aws/02-ecr-and-ecs-fargate.md)
+- [hands-on/09-aws-first-deployment-lab.md](../../hands-on/09-aws-first-deployment-lab.md)
+- [docs/06-aws/04-cleanup.md](../06-aws/04-cleanup.md)
