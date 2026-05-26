@@ -212,6 +212,14 @@ Expected:
 
 If direct service URLs work but gateway URLs fail, check `gateway/nginx.conf`.
 
+## 🐍 Optional: Test Gateway With Python
+
+After the gateway works in browser or Postman, you can test one gateway route with Python:
+
+```powershell
+py templates\python-api-tests\06_gateway_products.py
+```
+
 ## 🧠 Why The Gateway Matters
 
 Without a gateway:

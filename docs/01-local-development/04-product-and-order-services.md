@@ -144,6 +144,12 @@ Your response will include more products. That is correct.
 
 Stop with `Ctrl+C`.
 
+Optional Python test:
+
+```powershell
+py templates\python-api-tests\04_product_list.py
+```
+
 ## 🧾 Order Service
 
 Run from project root:
@@ -320,6 +326,12 @@ Expected:
 ```
 
 Stop with `Ctrl+C`.
+
+Optional Python test:
+
+```powershell
+py templates\python-api-tests\05_create_order.py
+```
 
 ## ▶️ Run All Three Services
 

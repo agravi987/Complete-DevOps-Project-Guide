@@ -89,6 +89,18 @@ kubectl logs deployment/gateway -n microservices-local
 kubectl delete namespace microservices-local
 ```
 
+## 🐍 Python API Tests
+
+```powershell
+py -m pip install requests
+py templates\python-api-tests\01_auth_health.py
+py templates\python-api-tests\02_auth_register.py
+py templates\python-api-tests\03_auth_login.py
+py templates\python-api-tests\04_product_list.py
+py templates\python-api-tests\05_create_order.py
+py templates\python-api-tests\06_gateway_products.py
+```
+
 ## 💾 Git
 
 ```powershell

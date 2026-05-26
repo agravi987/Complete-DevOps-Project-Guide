@@ -98,6 +98,7 @@ Goal:
 Do:
 
 - [docs/03-api-testing/01-postman-api-testing.md](../03-api-testing/01-postman-api-testing.md)
+- [docs/03-api-testing/02-python-api-testing.md](../03-api-testing/02-python-api-testing.md)
 - [hands-on/06-postman-api-testing-lab.md](../../hands-on/06-postman-api-testing-lab.md)
 
 ## Day 9: Local Kubernetes

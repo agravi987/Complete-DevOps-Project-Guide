@@ -340,6 +340,20 @@ Beginner tip:
 
 Use Postman while learning. Use PowerShell later when you want faster terminal testing.
 
+## 🐍 Optional: Test Auth APIs With Python
+
+If you want to test with Python, run only one script at a time:
+
+```powershell
+py templates\python-api-tests\01_auth_health.py
+py templates\python-api-tests\02_auth_register.py
+py templates\python-api-tests\03_auth_login.py
+```
+
+Full Python testing guide:
+
+[../03-api-testing/02-python-api-testing.md](../03-api-testing/02-python-api-testing.md)
+
 ## 💾 Commit
 
 Stop the server with `Ctrl+C`, then run from project root:

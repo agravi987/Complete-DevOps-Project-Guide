@@ -31,7 +31,7 @@ You will build a real microservice DevOps project:
 | Cache | Redis | Caches product data |
 | Containers | Docker | Packages each service |
 | Local Infra | Docker Compose | Runs the full stack locally |
-| API Testing | Postman | Tests APIs with saved variables |
+| API Testing | Postman + Python | Tests APIs one endpoint at a time |
 | Local Orchestration | Kubernetes in Docker Desktop | Tests deployment before cloud |
 | CI/CD | GitHub Actions | Checks code and Docker builds |
 | Cloud | AWS | ECR, ECS Fargate, RDS, ElastiCache, Secrets Manager |
@@ -137,6 +137,7 @@ Follow the phases in order.
 | 10 | [Database Integration](docs/02-containers/05-database-integration.md) | Persist data |
 | 11 | [Redis Caching](docs/02-containers/06-redis-cache.md) | Cache products |
 | 12 | [Postman API Testing](docs/03-api-testing/01-postman-api-testing.md) | Run API tests |
+| 12B | [Python API Testing](docs/03-api-testing/02-python-api-testing.md) | Test APIs with small scripts |
 | 13 | [Enable Kubernetes](docs/04-kubernetes/01-docker-desktop-kubernetes.md) | Prepare Docker Desktop Kubernetes |
 | 14 | [Local Kubernetes Deployment](docs/04-kubernetes/02-local-kubernetes-deployment.md) | Deploy locally with Kubernetes |
 | 15 | [Git and GitHub](docs/05-ci-cd/01-git-github.md) | Push code |
@@ -180,6 +181,14 @@ The guide shows manual Postman testing for:
 - Order creation
 - Gateway routes
 - Negative cases like wrong password
+
+## 🐍 Python API Testing Included
+
+If you want code-based testing, use:
+
+[docs/03-api-testing/02-python-api-testing.md](docs/03-api-testing/02-python-api-testing.md)
+
+The Python scripts are small and separate, so beginners can run only the one they need.
 
 ## ✅ Beginner Rules
 

@@ -32,6 +32,7 @@ Use this page to track your DevOps project progress.
 - [ ] Tested product list in Postman
 - [ ] Tested create order in Postman
 - [ ] Tested gateway product route in Postman
+- [ ] Ran one Python API test script successfully
 
 ## ☸️ Local Kubernetes
 
