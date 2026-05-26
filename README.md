@@ -38,23 +38,47 @@ You will build a real microservice DevOps project:
 
 ## 🏗️ System Architecture
 
-```text
-Browser
-  |
-  v
-React Frontend
-  |
-  v
-Nginx Gateway
-  |
-  +--> Auth Service
-  |
-  +--> Product Service
-  |
-  +--> Order Service
-          |
-          v
-PostgreSQL + Redis
+```mermaid
+flowchart LR
+    browser["Browser<br/>User"]:::user
+
+    subgraph edge["Entry Layer"]
+        gateway["Nginx Gateway<br/>single public entry point"]:::gateway
+    end
+
+    subgraph web["Web Layer"]
+        frontend["React Frontend<br/>customer UI"]:::frontend
+    end
+
+    subgraph api["Backend Microservices"]
+        auth["Auth Service<br/>register and login"]:::service
+        product["Product Service<br/>catalog APIs"]:::service
+        orderApi["Order Service<br/>order APIs"]:::service
+    end
+
+    subgraph data["Data Layer"]
+        postgres[("PostgreSQL<br/>users, products, orders")]:::database
+        redis[("Redis<br/>cache and temporary data")]:::cache
+    end
+
+    browser --> gateway
+    gateway -- "/" --> frontend
+    gateway -- "/api/auth" --> auth
+    gateway -- "/api/products" --> product
+    gateway -- "/api/orders" --> orderApi
+
+    auth -.-> postgres
+    product -.-> postgres
+    orderApi -.-> postgres
+    product -.-> redis
+    orderApi -.-> redis
+
+    classDef user fill:#f8fafc,stroke:#475569,color:#0f172a,stroke-width:2px;
+    classDef gateway fill:#fff7ed,stroke:#ea580c,color:#7c2d12,stroke-width:2px;
+    classDef frontend fill:#ecfeff,stroke:#0891b2,color:#164e63,stroke-width:2px;
+    classDef service fill:#eef2ff,stroke:#4f46e5,color:#312e81,stroke-width:2px;
+    classDef database fill:#ecfdf5,stroke:#059669,color:#064e3b,stroke-width:2px;
+    classDef cache fill:#fef2f2,stroke:#dc2626,color:#7f1d1d,stroke-width:2px;
 ```
 
 Detailed architecture:
