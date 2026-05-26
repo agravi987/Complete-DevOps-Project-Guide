@@ -14,6 +14,11 @@ Nginx will route requests to the correct container.
 
 Create `gateway/Dockerfile`:
 
+```powershell
+New-Item -ItemType Directory -Path .\gateway
+New-Item -ItemType File -Path .\gateway\Dockerfile
+```
+
 ```dockerfile
 FROM nginx:alpine
 
@@ -25,6 +30,10 @@ EXPOSE 80
 ## 🛣️ Create Nginx Config
 
 Create `gateway/nginx.conf`:
+
+```powershell
+New-Item -ItemType File -Path .\gateway\nginx.conf
+```
 
 ```nginx
 events {}

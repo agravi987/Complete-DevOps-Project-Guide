@@ -4,6 +4,15 @@ Turn the local app into a multi-container system.
 
 Finish local development first. This section assumes the backend services and frontend already run without Docker.
 
+## PowerShell File And Folder Commands
+
+Use these direct commands whenever a phase says to create a folder or file:
+
+```powershell
+New-Item -ItemType Directory -Path .\folder-name
+New-Item -ItemType File -Path .\folder-name\file-name.txt
+```
+
 ## Phases
 
 | Phase | Open | Finish with |

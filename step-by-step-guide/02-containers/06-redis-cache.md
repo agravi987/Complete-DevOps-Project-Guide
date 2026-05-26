@@ -18,6 +18,10 @@ cd ..\..
 
 Create `services/product-service/src/cache.js`:
 
+```powershell
+New-Item -ItemType File -Path .\services\product-service\src\cache.js
+```
+
 ```javascript
 const Redis = require("ioredis");
 

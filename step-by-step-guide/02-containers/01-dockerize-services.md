@@ -23,6 +23,14 @@ services/product-service/Dockerfile
 services/order-service/Dockerfile
 ```
 
+Run from project root:
+
+```powershell
+New-Item -ItemType File -Path .\services\auth-service\Dockerfile
+New-Item -ItemType File -Path .\services\product-service\Dockerfile
+New-Item -ItemType File -Path .\services\order-service\Dockerfile
+```
+
 Add the same content to each:
 
 ```dockerfile
@@ -69,6 +77,14 @@ Create this file in each backend service:
 services/auth-service/.dockerignore
 services/product-service/.dockerignore
 services/order-service/.dockerignore
+```
+
+Run from project root:
+
+```powershell
+New-Item -ItemType File -Path .\services\auth-service\.dockerignore
+New-Item -ItemType File -Path .\services\product-service\.dockerignore
+New-Item -ItemType File -Path .\services\order-service\.dockerignore
 ```
 
 Add:
@@ -152,6 +168,10 @@ Stop with `Ctrl+C`.
 
 Create `frontend/Dockerfile`:
 
+```powershell
+New-Item -ItemType File -Path .\frontend\Dockerfile
+```
+
 ```dockerfile
 FROM node:24-alpine
 
@@ -169,6 +189,10 @@ CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
 ```
 
 Create `frontend/.dockerignore`:
+
+```powershell
+New-Item -ItemType File -Path .\frontend\.dockerignore
+```
 
 ```dockerignore
 node_modules

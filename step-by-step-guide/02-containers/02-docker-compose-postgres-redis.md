@@ -8,6 +8,11 @@ Docker Compose starts multiple containers together and creates a private network
 
 Create `database/init/01-create-tables.sql`:
 
+```powershell
+New-Item -ItemType Directory -Path .\database\init -Force
+New-Item -ItemType File -Path .\database\init\01-create-tables.sql
+```
+
 ```sql
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
@@ -44,6 +49,10 @@ ON CONFLICT DO NOTHING;
 ## 🔐 Root .env
 
 Make sure project root `.env` exists:
+
+```powershell
+if (!(Test-Path .\.env)) { New-Item -ItemType File -Path .\.env }
+```
 
 ```env
 POSTGRES_DB=microservices_db

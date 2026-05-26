@@ -25,6 +25,10 @@ cd ..\..
 
 Create `services/auth-service/src/db.js`:
 
+```powershell
+New-Item -ItemType File -Path .\services\auth-service\src\db.js
+```
+
 ```javascript
 const { Pool } = require("pg");
 
@@ -117,6 +121,10 @@ module.exports = {
 
 Create `services/product-service/src/db.js`:
 
+```powershell
+New-Item -ItemType File -Path .\services\product-service\src\db.js
+```
+
 ```javascript
 const { Pool } = require("pg");
 
@@ -188,6 +196,10 @@ app.listen(port, "0.0.0.0", () => {
 ## 🧾 Add Database Helper To Order Service
 
 Create `services/order-service/src/db.js`:
+
+```powershell
+New-Item -ItemType File -Path .\services\order-service\src\db.js
+```
 
 ```javascript
 const { Pool } = require("pg");
