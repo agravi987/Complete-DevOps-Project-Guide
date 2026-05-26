@@ -1,4 +1,4 @@
-# Phase 4: Product And Order Services
+# 📦 Phase 4: Product And Order Services
 
 Goal: add two more services so the project starts to feel like a real microservice system.
 
@@ -9,7 +9,7 @@ You will create:
 
 For now both services use in-memory data. PostgreSQL is added later.
 
-## Product Service
+## 📦 Product Service
 
 Run from project root:
 
@@ -103,7 +103,7 @@ http://localhost:3002/products
 
 Stop with `Ctrl+C`.
 
-## Order Service
+## 🧾 Order Service
 
 Run from project root:
 
@@ -215,7 +215,7 @@ Invoke-RestMethod http://localhost:3003/orders
 
 Stop with `Ctrl+C`.
 
-## Run All Three Services
+## ▶️ Run All Three Services
 
 Open three PowerShell windows.
 
@@ -248,7 +248,7 @@ http://localhost:3002/health
 http://localhost:3003/health
 ```
 
-## Commit
+## 💾 Commit
 
 Run from project root:
 
@@ -257,6 +257,6 @@ git add .
 git commit -m "feat: add product and order services"
 ```
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when all three services start and each `/health` endpoint returns `OK`.

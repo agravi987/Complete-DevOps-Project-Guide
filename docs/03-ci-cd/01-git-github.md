@@ -1,8 +1,8 @@
-# Phase 12: Git And GitHub
+# 💾 Phase 12: Git And GitHub
 
 Goal: save your project history locally and push it to GitHub.
 
-## Why Git Matters In DevOps
+## 🧠 Why Git Matters In DevOps
 
 Git is the source of truth for:
 
@@ -15,7 +15,7 @@ Git is the source of truth for:
 
 In DevOps, almost everything starts from a Git commit.
 
-## Check Git Status Often
+## 🔎 Check Git Status Often
 
 Run from project root:
 
@@ -25,7 +25,7 @@ git status
 
 Use it before and after every commit.
 
-## Commit Meaningfully
+## ✍️ Commit Meaningfully
 
 Good commit messages are short and specific:
 
@@ -45,7 +45,7 @@ final
 new
 ```
 
-## Create A GitHub Repository
+## 🌐 Create A GitHub Repository
 
 On GitHub:
 
@@ -59,7 +59,7 @@ Example URL:
 https://github.com/<your-username>/microservices-project.git
 ```
 
-## Connect Local Repo To GitHub
+## 🔗 Connect Local Repo To GitHub
 
 Run from project root:
 
@@ -82,7 +82,7 @@ Then push:
 git push -u origin main
 ```
 
-## Normal Workflow
+## 🔁 Normal Workflow
 
 Every time you finish a small working change:
 
@@ -93,7 +93,7 @@ git commit -m "meaningful message"
 git push
 ```
 
-## Beginner Branch Workflow
+## 🌿 Beginner Branch Workflow
 
 For practice:
 
@@ -111,7 +111,7 @@ git push -u origin feature/add-health-checks
 
 Open a Pull Request on GitHub.
 
-## Do Not Commit Secrets
+## 🔐 Do Not Commit Secrets
 
 Never commit:
 
@@ -123,7 +123,7 @@ Never commit:
 
 If you accidentally commit a real secret, deleting it in a later commit is not enough. Rotate the secret immediately.
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when:
 

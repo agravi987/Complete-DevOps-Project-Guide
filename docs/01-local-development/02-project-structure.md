@@ -1,8 +1,8 @@
-# Phase 2: Project Structure
+# 🗂️ Phase 2: Project Structure
 
 Goal: create a clean monorepo structure that can grow from local development to Docker and AWS.
 
-## Final Folder Layout
+## 🧱 Final Folder Layout
 
 ```text
 microservices-project/
@@ -24,7 +24,7 @@ microservices-project/
   README.md
 ```
 
-## Create The Project
+## 🪜 Create The Project
 
 Run from your working folder, for example `C:\dev`.
 
@@ -52,7 +52,7 @@ New-Item .gitignore
 New-Item README.md
 ```
 
-## Add Root .gitignore
+## 🚫 Add Root .gitignore
 
 Open `.gitignore` and add:
 
@@ -75,7 +75,7 @@ Why this matters:
 - `.env` files often contain passwords.
 - Build output should not be committed unless there is a special reason.
 
-## Add .env.example
+## 🔐 Add .env.example
 
 Open `.env.example` and add:
 
@@ -94,7 +94,7 @@ JWT_SECRET=replace_with_a_long_random_value
 
 This file is safe to commit because it contains example values. Later each developer creates a real `.env` from it.
 
-## Create Your Local .env
+## 💻 Create Your Local .env
 
 ```powershell
 Copy-Item .env.example .env
@@ -102,7 +102,7 @@ Copy-Item .env.example .env
 
 Do not commit `.env`.
 
-## Initialize Git
+## 💾 Initialize Git
 
 ```powershell
 git init
@@ -117,7 +117,7 @@ If your repository already exists on GitHub, connect it:
 git remote add origin https://github.com/<your-username>/<your-repo>.git
 ```
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when:
 

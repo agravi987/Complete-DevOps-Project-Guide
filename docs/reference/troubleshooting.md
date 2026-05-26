@@ -1,8 +1,8 @@
-# Troubleshooting
+# 🛠️ Troubleshooting
 
 Use this when something does not work.
 
-## Docker Desktop Not Running
+## 🐳 Docker Desktop Not Running
 
 Error:
 
@@ -16,7 +16,7 @@ Fix:
 2. Wait for the engine to finish starting.
 3. Run the command again.
 
-## Port Already Allocated
+## 🚧 Port Already Allocated
 
 Error:
 
@@ -37,7 +37,7 @@ Stop old container:
 docker stop <container-name>
 ```
 
-## npm ci Fails In Docker
+## 📦 npm ci Fails In Docker
 
 Cause:
 
@@ -52,7 +52,7 @@ npm install
 
 Commit `package-lock.json`.
 
-## Service Cannot Connect To PostgreSQL
+## 🐘 Service Cannot Connect To PostgreSQL
 
 Check container status:
 
@@ -80,7 +80,7 @@ Not:
 POSTGRES_HOST=localhost
 ```
 
-## Nginx Route Returns 502
+## 🌐 Nginx Route Returns 502
 
 Cause:
 
@@ -96,7 +96,7 @@ docker compose logs product-service
 
 Make sure service names in `nginx.conf` match names in `docker-compose.yml`.
 
-## React Shows Gateway Not Running Yet
+## ⚛️ React Shows Gateway Not Running Yet
 
 Check:
 
@@ -118,7 +118,7 @@ docker compose build frontend
 docker compose up -d frontend
 ```
 
-## AWS ECR Login Fails
+## 🔐 AWS ECR Login Fails
 
 Check:
 
@@ -134,7 +134,7 @@ aws ecr get-login-password --region $env:AWS_REGION |
   docker login --username AWS --password-stdin $env:ECR_REGISTRY
 ```
 
-## ECS Task Stops Immediately
+## 🚀 ECS Task Stops Immediately
 
 Check CloudWatch logs first.
 
@@ -147,6 +147,6 @@ Common causes:
 - Task cannot read Secrets Manager value
 - Security group blocks database connection
 
-## Best Debugging Habit
+## 🧠 Best Debugging Habit
 
 Read the first real error. The first error usually tells you the cause. Later errors often only describe side effects.

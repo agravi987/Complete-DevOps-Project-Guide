@@ -1,8 +1,8 @@
-# Environment Variables
+# 🔐 Environment Variables
 
 Environment variables let you change configuration without changing code.
 
-## Root .env
+## 🗂️ Root .env
 
 Used by Docker Compose.
 
@@ -19,7 +19,7 @@ REDIS_PORT=6379
 JWT_SECRET=local_compose_secret_change_later
 ```
 
-## Backend Service Variables
+## 🧩 Backend Service Variables
 
 | Variable | Used By | Example | Notes |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ JWT_SECRET=local_compose_secret_change_later
 | `REDIS_PORT` | Backend services | `6379` | Redis port |
 | `JWT_SECRET` | Auth service | long random value | Secret in AWS |
 
-## Frontend Variables
+## ⚛️ Frontend Variables
 
 In `frontend/.env`:
 
@@ -44,7 +44,7 @@ VITE_API_BASE_URL=http://localhost:8080/api
 
 Vite only exposes browser variables that start with `VITE_`.
 
-## Local vs Docker Values
+## 💻 Local vs Docker Values
 
 When running directly on Windows:
 
@@ -62,7 +62,7 @@ REDIS_HOST=redis
 
 This difference exists because `localhost` inside a container means the container itself.
 
-## AWS Values
+## ☁️ AWS Values
 
 On AWS:
 

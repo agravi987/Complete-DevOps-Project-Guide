@@ -1,4 +1,4 @@
-# Phase 3: Auth Service
+# 🔐 Phase 3: Auth Service
 
 Goal: create the first microservice and run it directly on Windows without Docker.
 
@@ -11,7 +11,7 @@ The auth service starts simple:
 
 Database and Redis are added in a later phase.
 
-## Enter The Service Folder
+## 📍 Enter The Service Folder
 
 Run from project root:
 
@@ -19,7 +19,7 @@ Run from project root:
 cd services\auth-service
 ```
 
-## Initialize Node.js
+## 🟢 Initialize Node.js
 
 ```powershell
 npm init -y
@@ -27,7 +27,7 @@ npm install express dotenv jsonwebtoken bcryptjs
 npm install --save-dev nodemon
 ```
 
-## Create Folders And Files
+## 🗂️ Create Folders And Files
 
 ```powershell
 mkdir src
@@ -39,7 +39,7 @@ New-Item src\controllers\auth.controller.js
 New-Item .env
 ```
 
-## Add Environment Variables
+## 🔐 Add Environment Variables
 
 In `services/auth-service/.env`:
 
@@ -49,7 +49,7 @@ SERVICE_NAME=auth-service
 JWT_SECRET=local_auth_secret_change_later
 ```
 
-## Add Auth Controller
+## 🧠 Add Auth Controller
 
 In `services/auth-service/src/controllers/auth.controller.js`:
 
@@ -124,7 +124,7 @@ module.exports = {
 };
 ```
 
-## Add Routes
+## 🛣️ Add Routes
 
 In `services/auth-service/src/routes/auth.routes.js`:
 
@@ -140,7 +140,7 @@ router.post("/login", login);
 module.exports = router;
 ```
 
-## Add Express App
+## 🚀 Add Express App
 
 In `services/auth-service/src/app.js`:
 
@@ -178,7 +178,7 @@ Why `0.0.0.0`?
 
 When this service later runs inside Docker, binding to `0.0.0.0` allows traffic from outside the container. Binding only to `localhost` can make a container look broken.
 
-## Update package.json Scripts
+## 📦 Update package.json Scripts
 
 In `services/auth-service/package.json`, replace the `scripts` section:
 
@@ -189,7 +189,7 @@ In `services/auth-service/package.json`, replace the `scripts` section:
 }
 ```
 
-## Run The Service
+## ▶️ Run The Service
 
 ```powershell
 npm run dev
@@ -201,7 +201,7 @@ Expected output:
 Auth service running on port 3001
 ```
 
-## Test In Browser
+## 🌐 Test In Browser
 
 Open:
 
@@ -210,7 +210,7 @@ http://localhost:3001
 http://localhost:3001/health
 ```
 
-## Test With PowerShell
+## 🧪 Test With PowerShell
 
 Register:
 
@@ -232,7 +232,7 @@ Invoke-RestMethod `
   -Body '{"email":"ravi@example.com","password":"password123"}'
 ```
 
-## Commit
+## 💾 Commit
 
 Stop the server with `Ctrl+C`, then run from project root:
 
@@ -242,7 +242,7 @@ git add .
 git commit -m "feat: add local auth service"
 ```
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when:
 

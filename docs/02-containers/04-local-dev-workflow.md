@@ -1,14 +1,14 @@
-# Phase 9: Local Development Workflow
+# 🛠️ Phase 9: Local Development Workflow
 
 Goal: learn the normal commands you will use every day.
 
-## Start The Full Stack
+## ▶️ Start The Full Stack
 
 ```powershell
 docker compose up --build
 ```
 
-## Start In Background
+## 🌙 Start In Background
 
 ```powershell
 docker compose up --build -d
@@ -16,13 +16,13 @@ docker compose up --build -d
 
 Use background mode when you want your terminal free.
 
-## View Running Containers
+## 👀 View Running Containers
 
 ```powershell
 docker compose ps
 ```
 
-## Follow Logs
+## 📜 Follow Logs
 
 All services:
 
@@ -36,14 +36,14 @@ One service:
 docker compose logs -f auth-service
 ```
 
-## Rebuild One Service
+## 🔁 Rebuild One Service
 
 ```powershell
 docker compose build auth-service
 docker compose up -d auth-service
 ```
 
-## Open A Shell Inside A Container
+## 🐚 Open A Shell Inside A Container
 
 ```powershell
 docker exec -it auth-service sh
@@ -55,7 +55,7 @@ Exit:
 exit
 ```
 
-## Connect To PostgreSQL
+## 🐘 Connect To PostgreSQL
 
 ```powershell
 docker exec -it microservices-postgres psql -U app_user -d microservices_db
@@ -71,7 +71,7 @@ SELECT * FROM orders;
 \q
 ```
 
-## Stop Containers
+## 🛑 Stop Containers
 
 Keep database volume:
 
@@ -85,7 +85,7 @@ Delete database volume:
 docker compose down -v
 ```
 
-## Reset Everything Local
+## ♻️ Reset Everything Local
 
 Use this when your local database is messy and you want a clean start:
 
@@ -94,7 +94,7 @@ docker compose down -v
 docker compose up --build
 ```
 
-## Check Ports
+## 🔎 Check Ports
 
 If a port is already used:
 
@@ -108,7 +108,7 @@ Then find the process:
 tasklist /FI "PID eq <PID>"
 ```
 
-## Beginner Debugging Order
+## 🧭 Beginner Debugging Order
 
 When something fails, check in this order:
 
@@ -119,7 +119,7 @@ When something fails, check in this order:
 5. Did you edit `.env` correctly?
 6. Did you rebuild after changing Dockerfile or package files?
 
-## Commit Habit
+## 💾 Commit Habit
 
 After each working phase:
 

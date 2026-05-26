@@ -1,10 +1,10 @@
-# Phase 14: AWS Foundation
+# ☁️ Phase 14: AWS Foundation
 
 Goal: prepare AWS safely before deploying anything.
 
 Do not skip this phase. AWS resources can cost money if left running.
 
-## What You Need
+## 🧰 What You Need
 
 - AWS account
 - AWS CLI v2 installed
@@ -12,7 +12,7 @@ Do not skip this phase. AWS resources can cost money if left running.
 - GitHub repository pushed
 - Local Docker Compose project working
 
-## Safety Rules
+## ⚠️ Safety Rules
 
 - Do not use the AWS root user for daily work.
 - Do not create long-lived root access keys.
@@ -21,7 +21,7 @@ Do not skip this phase. AWS resources can cost money if left running.
 - Delete resources after practice.
 - Never commit AWS keys or secrets.
 
-## Choose A Region
+## 🌍 Choose A Region
 
 Pick one region and keep it consistent.
 
@@ -39,7 +39,7 @@ $env:AWS_REGION="us-east-1"
 
 Use the region closest to you or the region your course/team requires.
 
-## Install AWS CLI v2
+## 🧩 Install AWS CLI v2
 
 Verify:
 
@@ -49,7 +49,7 @@ aws --version
 
 If it is missing, install AWS CLI v2 from the official AWS CLI documentation.
 
-## Configure Authentication
+## 🔐 Configure Authentication
 
 Recommended for beginners using a personal AWS account:
 
@@ -70,7 +70,7 @@ For teams or serious production work, prefer IAM Identity Center and short-lived
 aws configure sso
 ```
 
-## Verify AWS Access
+## ✅ Verify AWS Access
 
 ```powershell
 aws sts get-caller-identity
@@ -91,7 +91,7 @@ Save account ID for later commands:
 $env:AWS_ACCOUNT_ID=(aws sts get-caller-identity --query Account --output text)
 ```
 
-## Create A Budget
+## 💰 Create A Budget
 
 Create a small monthly budget in the AWS Billing console before launching resources.
 
@@ -103,7 +103,7 @@ Suggested learning budget:
 
 This is not a guarantee that AWS will stop resources. A budget alerts you so you can act quickly.
 
-## Services Used Later
+## 🧱 Services Used Later
 
 | Service | Purpose |
 | --- | --- |
@@ -116,7 +116,7 @@ This is not a guarantee that AWS will stop resources. A budget alerts you so you
 | CloudWatch Logs | View container logs |
 | IAM | Permissions and service roles |
 
-## Beginner Deployment Order
+## 🪜 Beginner Deployment Order
 
 Deploy in this order:
 
@@ -129,7 +129,7 @@ Deploy in this order:
 7. Move secrets to Secrets Manager.
 8. Add monitoring and cleanup.
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when:
 

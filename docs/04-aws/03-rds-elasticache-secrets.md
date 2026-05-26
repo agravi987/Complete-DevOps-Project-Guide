@@ -1,4 +1,4 @@
-# Phase 16: RDS, ElastiCache, And Secrets
+# 🔐 Phase 16: RDS, ElastiCache, And Secrets
 
 Goal: replace local development dependencies with managed AWS services.
 
@@ -14,7 +14,7 @@ AWS:
 RDS PostgreSQL + ElastiCache Redis + Secrets Manager
 ```
 
-## Why Managed Services
+## 🧠 Why Managed Services
 
 Managed AWS services handle much of the operational work:
 
@@ -27,7 +27,7 @@ Managed AWS services handle much of the operational work:
 
 You still need to configure them carefully.
 
-## RDS PostgreSQL
+## 🐘 RDS PostgreSQL
 
 Create an RDS PostgreSQL database.
 
@@ -51,7 +51,7 @@ Allow inbound PostgreSQL 5432 only from ECS task security group.
 
 Do not open PostgreSQL to the whole internet.
 
-## ElastiCache Redis
+## ⚡ ElastiCache Redis
 
 Create an ElastiCache Redis-compatible cache.
 
@@ -64,7 +64,7 @@ Recommended beginner settings:
 | Public access | No |
 | Security group | Allow 6379 only from ECS task security group |
 
-## Secrets Manager
+## 🔐 Secrets Manager
 
 Store sensitive values in Secrets Manager:
 
@@ -81,7 +81,7 @@ Generate a strong local value:
 
 If that command is unavailable, use a password manager.
 
-## ECS Task Environment Variables
+## 🧩 ECS Task Environment Variables
 
 Use plain environment variables for non-secret values:
 
@@ -101,7 +101,7 @@ POSTGRES_PASSWORD=<Secrets Manager ARN>
 JWT_SECRET=<Secrets Manager ARN>
 ```
 
-## Task Definition Secrets Example
+## 📄 Task Definition Secrets Example
 
 In an ECS task definition container, secrets look like this:
 
@@ -120,7 +120,7 @@ In an ECS task definition container, secrets look like this:
 
 The ECS task execution role needs permission to read the secrets.
 
-## Database Tables On RDS
+## 🗄️ Database Tables On RDS
 
 You need to run the same SQL from:
 
@@ -136,7 +136,7 @@ For beginner practice, the simplest options are:
 
 For a real team project, use repeatable migrations instead of manually running SQL.
 
-## Security Group Flow
+## 🛡️ Security Group Flow
 
 Use this mental model:
 
@@ -160,7 +160,7 @@ Rules:
 - RDS accepts traffic only from ECS.
 - Redis accepts traffic only from ECS.
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when:
 

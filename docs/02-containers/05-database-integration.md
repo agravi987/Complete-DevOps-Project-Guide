@@ -1,10 +1,10 @@
-# Phase 10: Connect Services To PostgreSQL
+# 🐘 Phase 10: Connect Services To PostgreSQL
 
 Goal: replace in-memory data with PostgreSQL so data survives service restarts.
 
 This phase uses the PostgreSQL container from the Docker Compose phase.
 
-## Install pg In Each Backend Service
+## 📦 Install pg In Each Backend Service
 
 Run from project root:
 
@@ -21,7 +21,7 @@ npm install pg
 cd ..\..
 ```
 
-## Add Database Helper To Auth Service
+## 🔐 Add Database Helper To Auth Service
 
 Create `services/auth-service/src/db.js`:
 
@@ -113,7 +113,7 @@ module.exports = {
 };
 ```
 
-## Add Database Helper To Product Service
+## 📦 Add Database Helper To Product Service
 
 Create `services/product-service/src/db.js`:
 
@@ -185,7 +185,7 @@ app.listen(port, "0.0.0.0", () => {
 });
 ```
 
-## Add Database Helper To Order Service
+## 🧾 Add Database Helper To Order Service
 
 Create `services/order-service/src/db.js`:
 
@@ -264,7 +264,7 @@ app.listen(port, "0.0.0.0", () => {
 });
 ```
 
-## Rebuild And Test
+## 🧪 Rebuild And Test
 
 Run from project root:
 
@@ -314,14 +314,14 @@ Invoke-RestMethod http://localhost:3003/orders
 
 The order should still exist because it is stored in PostgreSQL.
 
-## Commit
+## 💾 Commit
 
 ```powershell
 git add .
 git commit -m "feat: persist service data in postgres"
 ```
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when:
 

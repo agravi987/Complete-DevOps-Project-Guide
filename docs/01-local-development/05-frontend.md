@@ -1,10 +1,10 @@
-# Phase 5: Frontend
+# ⚛️ Phase 5: Frontend
 
 Goal: create a simple React frontend that calls the services through one API base URL.
 
 In early local development you can call services directly. After Nginx is added, the frontend will call the gateway instead.
 
-## Create The React App
+## ⚛️ Create The React App
 
 Run from project root:
 
@@ -14,7 +14,7 @@ npm create vite@latest . -- --template react
 npm install
 ```
 
-## Add Environment File
+## 🔐 Add Environment File
 
 Create `frontend/.env`:
 
@@ -30,7 +30,7 @@ VITE_API_BASE_URL=http://localhost:8080/api
 
 This value points to the Nginx gateway that you will add later.
 
-## Replace App.jsx
+## 🧩 Replace App.jsx
 
 Replace `frontend/src/App.jsx`:
 
@@ -84,7 +84,7 @@ function App() {
 export default App;
 ```
 
-## Replace App.css
+## 🎨 Replace App.css
 
 Replace `frontend/src/App.css`:
 
@@ -161,7 +161,7 @@ h1 {
 }
 ```
 
-## Run Frontend
+## ▶️ Run Frontend
 
 ```powershell
 npm run dev -- --host 0.0.0.0
@@ -175,7 +175,7 @@ http://localhost:5173
 
 At this point the frontend may show `Gateway not running yet`. That is fine. The gateway is added in the container phase.
 
-## Commit
+## 💾 Commit
 
 Run from project root:
 
@@ -184,7 +184,7 @@ git add .
 git commit -m "feat: add react frontend"
 ```
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when:
 

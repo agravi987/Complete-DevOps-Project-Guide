@@ -1,8 +1,8 @@
-# Phase 1: Windows Prerequisites
+# 🪟 Phase 1: Windows Prerequisites
 
 Goal: install the tools needed to build and run the project locally on Windows.
 
-## Tools To Install
+## 🧰 Tools To Install
 
 Install these first:
 
@@ -22,7 +22,7 @@ Recommended later:
 | AWS CLI v2 | Manage AWS from terminal |
 | AWS account | Deploy the project to cloud |
 
-## Verify Local Tools
+## ✅ Verify Local Tools
 
 Open PowerShell and run:
 
@@ -41,7 +41,7 @@ Expected result:
 - `docker compose version` should work with a space between `docker` and `compose`.
 - Docker Desktop must be running before Docker commands work.
 
-## Docker Desktop On Windows
+## 🐳 Docker Desktop On Windows
 
 Use Docker Desktop with the WSL 2 backend when possible. It is the normal local setup for Windows developers.
 
@@ -54,7 +54,7 @@ docker run hello-world
 
 If `docker run hello-world` succeeds, Docker is ready.
 
-## Create A Working Folder
+## 🗂️ Create A Working Folder
 
 Use a simple path while learning. Spaces in folder names are allowed, but short paths reduce beginner mistakes.
 
@@ -65,7 +65,7 @@ mkdir C:\dev
 cd C:\dev
 ```
 
-## Common Windows Issues
+## 🛠️ Common Windows Issues
 
 ### Docker daemon error
 
@@ -105,7 +105,7 @@ docker stop <container-name>
 
 Close PowerShell and open it again. Some installers update `PATH`, and a new terminal session is needed.
 
-## Checkpoint
+## ✅ Checkpoint
 
 Before continuing, these commands should work:
 

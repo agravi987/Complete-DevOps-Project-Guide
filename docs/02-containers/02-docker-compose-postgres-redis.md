@@ -1,10 +1,10 @@
-# Phase 7: Docker Compose With PostgreSQL And Redis
+# 🧩 Phase 7: Docker Compose With PostgreSQL And Redis
 
 Goal: run the full local stack with one command.
 
 Docker Compose starts multiple containers together and creates a private network so they can find each other by service name.
 
-## Add Database Initialization SQL
+## 🐘 Add Database Initialization SQL
 
 Create `database/init/01-create-tables.sql`:
 
@@ -41,7 +41,7 @@ VALUES
 ON CONFLICT DO NOTHING;
 ```
 
-## Root .env
+## 🔐 Root .env
 
 Make sure project root `.env` exists:
 
@@ -58,7 +58,7 @@ REDIS_PORT=6379
 JWT_SECRET=local_compose_secret_change_later
 ```
 
-## Add docker-compose.yml
+## 🧩 Add docker-compose.yml
 
 Replace project root `docker-compose.yml`:
 
@@ -158,7 +158,7 @@ volumes:
   postgres-data:
 ```
 
-## Start The Stack
+## ▶️ Start The Stack
 
 Run from project root:
 
@@ -174,7 +174,7 @@ Compose will:
 4. Start the backend services.
 5. Start the frontend.
 
-## Test Services
+## 🧪 Test Services
 
 Open a second PowerShell window and run:
 
@@ -198,7 +198,7 @@ SELECT * FROM products;
 \q
 ```
 
-## Stop The Stack
+## 🛑 Stop The Stack
 
 Stop containers but keep database data:
 
@@ -214,14 +214,14 @@ docker compose down -v
 
 Only use `-v` when you are okay deleting local database data.
 
-## Commit
+## 💾 Commit
 
 ```powershell
 git add .
 git commit -m "feat: add docker compose stack with postgres and redis"
 ```
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when:
 

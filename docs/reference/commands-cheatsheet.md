@@ -1,15 +1,15 @@
-# Commands Cheat Sheet
+# 🧰 Commands Cheat Sheet
 
 Use this file when you forget a command.
 
-## Project
+## 🗂️ Project
 
 ```powershell
 cd C:\dev\microservices-project
 code .
 ```
 
-## Node.js
+## 🟢 Node.js
 
 ```powershell
 npm install
@@ -17,7 +17,7 @@ npm run dev
 npm start
 ```
 
-## Docker
+## 🐳 Docker
 
 ```powershell
 docker --version
@@ -29,14 +29,14 @@ docker stop <container-name>
 docker rm <container-name>
 ```
 
-## Docker Build And Run
+## 🏗️ Docker Build And Run
 
 ```powershell
 docker build -t auth-service:local .\services\auth-service
 docker run --rm -p 3001:3001 auth-service:local
 ```
 
-## Docker Compose
+## 🧩 Docker Compose
 
 ```powershell
 docker compose up --build
@@ -48,7 +48,7 @@ docker compose down
 docker compose down -v
 ```
 
-## PostgreSQL In Container
+## 🐘 PostgreSQL In Container
 
 ```powershell
 docker exec -it microservices-postgres psql -U app_user -d microservices_db
@@ -64,7 +64,7 @@ SELECT * FROM orders;
 \q
 ```
 
-## Git
+## 💾 Git
 
 ```powershell
 git status
@@ -75,7 +75,7 @@ git pull
 git log --oneline
 ```
 
-## AWS
+## ☁️ AWS
 
 ```powershell
 aws --version
@@ -84,7 +84,7 @@ $env:AWS_REGION="ap-south-1"
 $env:AWS_ACCOUNT_ID=(aws sts get-caller-identity --query Account --output text)
 ```
 
-## ECR Login
+## 🔐 ECR Login
 
 ```powershell
 $env:ECR_REGISTRY="$env:AWS_ACCOUNT_ID.dkr.ecr.$env:AWS_REGION.amazonaws.com"

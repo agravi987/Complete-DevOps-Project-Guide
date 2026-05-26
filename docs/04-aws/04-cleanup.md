@@ -1,10 +1,10 @@
-# Phase 17: AWS Cleanup
+# 🧹 Phase 17: AWS Cleanup
 
 Goal: remove AWS resources when you finish practicing.
 
 Cleanup is part of DevOps. A running unused resource can keep charging your account.
 
-## Delete In This Order
+## 🪜 Delete In This Order
 
 1. ECS services
 2. ECS tasks
@@ -19,7 +19,7 @@ Cleanup is part of DevOps. A running unused resource can keep charging your acco
 11. ECR repositories
 12. Extra NAT gateways or Elastic IPs if you created them
 
-## ECS Cleanup
+## 🚀 ECS Cleanup
 
 Scale service to zero:
 
@@ -49,7 +49,7 @@ aws ecs delete-cluster `
   --region $env:AWS_REGION
 ```
 
-## ECR Cleanup
+## 📦 ECR Cleanup
 
 Delete repositories and images:
 
@@ -80,7 +80,7 @@ aws ecr delete-repository `
   --region $env:AWS_REGION
 ```
 
-## RDS Cleanup
+## 🐘 RDS Cleanup
 
 In the RDS console:
 
@@ -91,7 +91,7 @@ In the RDS console:
 
 Production projects should usually keep a final snapshot.
 
-## ElastiCache Cleanup
+## ⚡ ElastiCache Cleanup
 
 In the ElastiCache console:
 
@@ -99,7 +99,7 @@ In the ElastiCache console:
 2. Delete it.
 3. Confirm subnet groups and security groups if you created custom ones.
 
-## CloudWatch Logs Cleanup
+## 📜 CloudWatch Logs Cleanup
 
 List log groups:
 
@@ -117,7 +117,7 @@ aws logs delete-log-group `
   --region $env:AWS_REGION
 ```
 
-## Final Billing Check
+## 💰 Final Billing Check
 
 After cleanup:
 
@@ -126,7 +126,7 @@ After cleanup:
 3. Check Cost Explorer after a few hours.
 4. Confirm no unexpected resources are still running.
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are done when:
 

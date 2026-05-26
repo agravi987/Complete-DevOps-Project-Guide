@@ -1,10 +1,10 @@
-# Phase 11: Add Redis Caching
+# ⚡ Phase 11: Add Redis Caching
 
 Goal: use Redis for a real application behavior.
 
 The product service will cache the product list for 60 seconds. This teaches the basic DevOps idea behind cache containers and managed cache services.
 
-## Install Redis Client
+## 📦 Install Redis Client
 
 Run from project root:
 
@@ -14,7 +14,7 @@ npm install ioredis
 cd ..\..
 ```
 
-## Add Cache Helper
+## ⚡ Add Cache Helper
 
 Create `services/product-service/src/cache.js`:
 
@@ -29,7 +29,7 @@ const redis = new Redis({
 module.exports = redis;
 ```
 
-## Update Product Service
+## 📦 Update Product Service
 
 In `services/product-service/src/app.js`, add this import:
 
@@ -63,7 +63,7 @@ What this does:
 3. If Redis does not have the data, read PostgreSQL.
 4. Save the result in Redis for 60 seconds.
 
-## Rebuild And Test
+## 🧪 Rebuild And Test
 
 Run from project root:
 
@@ -92,7 +92,7 @@ TTL products:all
 exit
 ```
 
-## Cache Invalidation Note
+## 🧠 Cache Invalidation Note
 
 This beginner project only reads products. In real applications, when a product is created or updated, you must delete or refresh the cache.
 
@@ -102,14 +102,14 @@ Example:
 await redis.del("products:all");
 ```
 
-## Commit
+## 💾 Commit
 
 ```powershell
 git add .
 git commit -m "feat: cache products with redis"
 ```
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when:
 

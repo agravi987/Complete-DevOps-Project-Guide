@@ -1,8 +1,8 @@
-# Architecture
+# 🏗️ Architecture
 
 The project is a small e-commerce style microservice system.
 
-## Services
+## 🧱 Services
 
 | Component | Responsibility |
 | --- | --- |
@@ -14,7 +14,7 @@ The project is a small e-commerce style microservice system.
 | PostgreSQL | Persistent relational data |
 | Redis | Fast cache and temporary data |
 
-## Local Architecture
+## 💻 Local Architecture
 
 ```text
 User Browser
@@ -52,7 +52,7 @@ From your Windows browser, you still use `localhost` because the browser is outs
 http://localhost:8080
 ```
 
-## AWS Architecture Later
+## ☁️ AWS Architecture Later
 
 The AWS version follows the same idea:
 

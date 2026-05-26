@@ -1,10 +1,10 @@
-# Phase 6: Dockerize Services
+# 🐳 Phase 6: Dockerize Services
 
 Goal: package each app into a Docker image.
 
 Docker gives each service a repeatable runtime. If it works in the container locally, it is much closer to working in CI and AWS.
 
-## Important Concepts
+## 🧠 Important Concepts
 
 | Term | Meaning |
 | --- | --- |
@@ -13,7 +13,7 @@ Docker gives each service a repeatable runtime. If it works in the container loc
 | Dockerfile | Instructions for building an image |
 | .dockerignore | Files Docker should not copy into the image |
 
-## Backend Service Dockerfile
+## 📦 Backend Service Dockerfile
 
 Create this file in each backend service:
 
@@ -61,7 +61,7 @@ For `order-service`, use:
 EXPOSE 3003
 ```
 
-## Backend .dockerignore
+## 🚫 Backend .dockerignore
 
 Create this file in each backend service:
 
@@ -86,7 +86,7 @@ Why ignore `.env`?
 
 Images should not contain local secrets. Environment variables are passed when the container runs.
 
-## Build Auth Service Image
+## 🔐 Build Auth Service Image
 
 Run from project root:
 
@@ -112,7 +112,7 @@ Invoke-RestMethod http://localhost:3001/health
 
 Stop the container with `Ctrl+C`.
 
-## Build Product Service Image
+## 📦 Build Product Service Image
 
 ```powershell
 docker build -t product-service:local .\services\product-service
@@ -130,7 +130,7 @@ Invoke-RestMethod http://localhost:3002/products
 
 Stop with `Ctrl+C`.
 
-## Build Order Service Image
+## 🧾 Build Order Service Image
 
 ```powershell
 docker build -t order-service:local .\services\order-service
@@ -148,7 +148,7 @@ Invoke-RestMethod http://localhost:3003/health
 
 Stop with `Ctrl+C`.
 
-## Frontend Dockerfile
+## ⚛️ Frontend Dockerfile
 
 Create `frontend/Dockerfile`:
 
@@ -198,7 +198,7 @@ Open:
 http://localhost:5173
 ```
 
-## Commit
+## 💾 Commit
 
 Run from project root:
 
@@ -207,6 +207,6 @@ git add .
 git commit -m "feat: add dockerfiles for local services"
 ```
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when every service image builds and each container starts successfully.

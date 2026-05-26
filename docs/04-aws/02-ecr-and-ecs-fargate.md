@@ -1,10 +1,10 @@
-# Phase 15: ECR And ECS Fargate
+# 🚢 Phase 15: ECR And ECS Fargate
 
 Goal: push Docker images to Amazon ECR and run containers on ECS Fargate.
 
 Start with one service first. After that works, expand to the full stack.
 
-## Set Variables
+## 🔧 Set Variables
 
 Run in PowerShell:
 
@@ -16,7 +16,7 @@ $env:ECR_REGISTRY="$env:AWS_ACCOUNT_ID.dkr.ecr.$env:AWS_REGION.amazonaws.com"
 
 Change the region if needed.
 
-## Create ECR Repositories
+## 📦 Create ECR Repositories
 
 ```powershell
 aws ecr create-repository `
@@ -47,7 +47,7 @@ aws ecr create-repository `
 
 If a repository already exists, AWS returns an error. That is okay; continue.
 
-## Login Docker To ECR
+## 🔐 Login Docker To ECR
 
 ```powershell
 aws ecr get-login-password --region $env:AWS_REGION |
@@ -56,7 +56,7 @@ aws ecr get-login-password --region $env:AWS_REGION |
 
 The login token is temporary.
 
-## Build, Tag, And Push Images
+## 🏗️ Build, Tag, And Push Images
 
 Auth service:
 
@@ -98,7 +98,7 @@ docker tag microservices-gateway:local "$env:ECR_REGISTRY/microservices/gateway:
 docker push "$env:ECR_REGISTRY/microservices/gateway:v1"
 ```
 
-## Create ECS Cluster
+## 🚀 Create ECS Cluster
 
 ```powershell
 aws ecs create-cluster `
@@ -116,7 +116,7 @@ aws logs create-log-group `
 
 If it already exists, continue.
 
-## Create ECS Task Execution Role
+## 🔑 Create ECS Task Execution Role
 
 Create `templates/aws/ecs-task-execution-assume-role.json`:
 
@@ -153,7 +153,7 @@ aws iam attach-role-policy `
 
 If the role already exists, keep using it.
 
-## Beginner First Deployment
+## 🪜 Beginner First Deployment
 
 For the first AWS run, deploy only the auth service.
 
@@ -180,7 +180,7 @@ For the first practice service only:
 
 This is a learning-only shortcut. For a more production-like setup, put tasks in private subnets and expose only an Application Load Balancer.
 
-## Test First Service
+## 🧪 Test First Service
 
 After ECS starts the task, find its public IP in the ECS task networking details.
 
@@ -199,7 +199,7 @@ Expected:
 }
 ```
 
-## Production-Like Next Step: Application Load Balancer
+## 🌐 Production-Like Next Step: Application Load Balancer
 
 After one service works, move to an Application Load Balancer.
 
@@ -228,7 +228,7 @@ In a production-style setup:
 - RDS and ElastiCache are private.
 - Security groups allow only the needed traffic.
 
-## Check Logs
+## 📜 Check Logs
 
 Open CloudWatch Logs and find the log group created by ECS.
 
@@ -238,7 +238,7 @@ Good logs should show:
 Auth service running on port 3001
 ```
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when:
 

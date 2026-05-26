@@ -1,10 +1,10 @@
-# Phase 13: GitHub Actions CI
+# 🚀 Phase 13: GitHub Actions CI
 
 Goal: make GitHub automatically check your project when code is pushed.
 
 CI means Continuous Integration. It catches problems before they reach deployment.
 
-## What This CI Will Do
+## 🎯 What This CI Will Do
 
 The first CI pipeline will:
 
@@ -13,7 +13,7 @@ The first CI pipeline will:
 3. Run tests if they exist.
 4. Build Docker images to catch Dockerfile errors.
 
-## Create Workflow Folder
+## 🗂️ Create Workflow Folder
 
 Run from project root:
 
@@ -23,7 +23,7 @@ mkdir .github\workflows
 New-Item .github\workflows\ci.yml
 ```
 
-## Add ci.yml
+## 🧩 Add ci.yml
 
 Add this to `.github/workflows/ci.yml`:
 
@@ -97,7 +97,7 @@ jobs:
         run: docker build -t ${{ matrix.image.name }}:ci ./${{ matrix.image.context }}
 ```
 
-## Commit And Push
+## 💾 Commit And Push
 
 ```powershell
 git add .github\workflows\ci.yml
@@ -105,7 +105,7 @@ git commit -m "ci: add node and docker build workflow"
 git push
 ```
 
-## View The Workflow
+## 👀 View The Workflow
 
 On GitHub:
 
@@ -114,7 +114,7 @@ On GitHub:
 3. Open the latest `ci` run.
 4. Check each job.
 
-## If CI Fails
+## 🛠️ If CI Fails
 
 Do not panic. CI failures are useful.
 
@@ -127,7 +127,7 @@ Common causes:
 | Tests fail | Run the same command locally |
 | Wrong Node version | Match local and CI Node versions |
 
-## Add Real Tests Later
+## 🧪 Add Real Tests Later
 
 Right now `npm test --if-present` allows the workflow to pass even before tests exist.
 
@@ -139,7 +139,7 @@ Later you can add:
 - Security scanning
 - Image push to Amazon ECR
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when:
 

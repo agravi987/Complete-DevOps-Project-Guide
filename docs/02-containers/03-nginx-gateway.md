@@ -1,4 +1,4 @@
-# Phase 8: Nginx Gateway
+# 🌐 Phase 8: Nginx Gateway
 
 Goal: put one entry point in front of the frontend and APIs.
 
@@ -10,7 +10,7 @@ http://localhost:8080
 
 Nginx will route requests to the correct container.
 
-## Create Gateway Dockerfile
+## 🐳 Create Gateway Dockerfile
 
 Create `gateway/Dockerfile`:
 
@@ -22,7 +22,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
 ```
 
-## Create Nginx Config
+## 🛣️ Create Nginx Config
 
 Create `gateway/nginx.conf`:
 
@@ -95,7 +95,7 @@ http {
 }
 ```
 
-## Add Gateway To docker-compose.yml
+## 🧩 Add Gateway To docker-compose.yml
 
 Add this service under `services`:
 
@@ -112,7 +112,7 @@ Add this service under `services`:
       - order-service
 ```
 
-## Start Everything
+## ▶️ Start Everything
 
 Run from project root:
 
@@ -120,7 +120,7 @@ Run from project root:
 docker compose up --build
 ```
 
-## Test Through Gateway
+## 🧪 Test Through Gateway
 
 Open:
 
@@ -151,7 +151,7 @@ Invoke-RestMethod `
   -Body '{"userId":1,"productId":1,"quantity":2}'
 ```
 
-## Why The Gateway Matters
+## 🧠 Why The Gateway Matters
 
 Without a gateway:
 
@@ -171,13 +171,13 @@ Frontend -> localhost:8080/api/orders
 
 Later on AWS, the gateway/load balancer is what makes the system easier to expose safely.
 
-## Commit
+## 💾 Commit
 
 ```powershell
 git add .
 git commit -m "feat: add nginx gateway routing"
 ```
 
-## Checkpoint
+## ✅ Checkpoint
 
 You are ready when the frontend and all APIs work through `http://localhost:8080`.
