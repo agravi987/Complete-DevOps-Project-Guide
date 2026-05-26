@@ -12,7 +12,7 @@ Use it in two ways:
 
 - 📖 Read `docs/` to understand concepts and steps.
 - 🧪 Use `hands-on/` to actually build and verify the project.
-- 📬 Use `postman/` to test APIs like a real backend project.
+- 📬 Use Postman to test APIs like a real backend project.
 
 ## 🗺️ Simple Learning Flow
 

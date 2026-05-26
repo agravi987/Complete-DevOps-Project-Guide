@@ -224,25 +224,6 @@ Now test through Nginx:
 
 Only after these work, test POST requests through the gateway.
 
-## 📦 Optional: Import Ready Postman Collection
-
-After you understand the manual testing flow, you can import the ready files:
-
-```text
-postman/microservices-devops-api-tests.postman_collection.json
-postman/microservices-local.postman_environment.json
-```
-
-Use them as a shortcut, not as the first learning step.
-
-In Postman:
-
-1. Click `Import`.
-2. Select both files.
-3. Select environment `Microservices Local`.
-4. Run one request first.
-5. Later, run a folder when you feel comfortable.
-
 ## 🧭 Beginner Debugging Rule
 
 If a request fails, check in this order:

@@ -66,19 +66,15 @@ SELECT * FROM orders;
 
 ## 📬 Postman
 
-Import these files in Postman:
+Create one request at a time:
 
 ```text
-postman/microservices-devops-api-tests.postman_collection.json
-postman/microservices-local.postman_environment.json
-```
-
-After manual testing, you can run these optional collection folders:
-
-```text
-01 Direct Local Services
-02 Gateway Routes
-03 Negative Tests
+GET http://localhost:3001/health
+POST http://localhost:3001/auth/register
+POST http://localhost:3001/auth/login
+GET http://localhost:3002/products
+POST http://localhost:3003/orders
+GET http://localhost:8080/api/products
 ```
 
 ## 💾 Git

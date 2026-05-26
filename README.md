@@ -83,10 +83,6 @@ Detailed architecture:
 |   |-- 07-ci-cd-lab.md
 |   `-- 08-aws-first-deployment-lab.md
 |
-|-- postman/
-|   |-- microservices-devops-api-tests.postman_collection.json
-|   `-- microservices-local.postman_environment.json
-|
 `-- templates/
     |-- aws/
     `-- github-actions/
@@ -142,16 +138,7 @@ Beginner flow:
 3. Fix it if needed.
 4. Move to the next API.
 
-The ready collection is optional after you understand the manual flow.
-
-Import these into Postman later:
-
-| File | Purpose |
-| --- | --- |
-| [Postman Collection](postman/microservices-devops-api-tests.postman_collection.json) | API requests and tests |
-| [Postman Environment](postman/microservices-local.postman_environment.json) | Local URLs and variables |
-
-The optional collection tests:
+The guide shows manual Postman testing for:
 
 - Health endpoints
 - Register user

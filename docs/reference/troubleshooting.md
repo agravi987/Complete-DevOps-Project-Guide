@@ -130,9 +130,10 @@ appears in the request URL or the request fails immediately.
 
 Fix:
 
-1. Import `postman/microservices-local.postman_environment.json`.
-2. Select `Microservices Local` in the Postman environment dropdown.
-3. Run the request again.
+1. Check the request URL manually.
+2. If you created a Postman environment yourself, select it in the environment dropdown.
+3. If you are not using environments, replace variables like `{{gatewayBaseUrl}}` with `http://localhost:8080`.
+4. Run the request again.
 
 ## 📬 Postman Register Returns 409
 

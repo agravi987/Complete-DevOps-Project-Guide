@@ -7,7 +7,6 @@ This section teaches how to test the microservices like a real backend or DevOps
 By the end of this section, you will be able to:
 
 - Test each API manually in Postman
-- Import a ready Postman collection
 - Use a Postman environment
 - Run tests against direct service ports
 - Run tests through the Nginx gateway
@@ -23,13 +22,6 @@ By the end of this section, you will be able to:
 ## 🧪 Matching Lab
 
 - [Lab 06: Postman API Testing](../../hands-on/06-postman-api-testing-lab.md)
-
-## 📦 Postman Files
-
-These files are optional helpers after you understand manual testing:
-
-- [Collection](../../postman/microservices-devops-api-tests.postman_collection.json)
-- [Environment](../../postman/microservices-local.postman_environment.json)
 
 ## ✅ Section Checkpoint
 

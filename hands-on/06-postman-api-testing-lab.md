@@ -195,19 +195,6 @@ Expected:
 200 OK
 ```
 
-## 📦 Optional: Import Ready Collection Later
-
-After you test manually, you can import:
-
-```text
-postman/microservices-devops-api-tests.postman_collection.json
-postman/microservices-local.postman_environment.json
-```
-
-Then run one request at a time.
-
-Only run full folders after you understand what each request does.
-
 ## 🧠 What You Learned
 
 - How to test one API at a time

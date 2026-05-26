@@ -24,13 +24,6 @@ Use the labs in:
 
 The documentation explains the concepts. The hands-on labs make you do the work step by step.
 
-## 📬 For API Testing
-
-Import these into Postman:
-
-- [Postman Collection](../postman/microservices-devops-api-tests.postman_collection.json)
-- [Postman Environment](../postman/microservices-local.postman_environment.json)
-
 ## ✅ How To Study
 
 - Read one phase.

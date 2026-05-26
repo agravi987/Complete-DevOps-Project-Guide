@@ -73,9 +73,9 @@ REDIS_HOST=<elasticache-endpoint>
 
 Store passwords and JWT secrets in Secrets Manager, not plain environment variables in Git.
 
-## 📬 Postman Environment Variables
+## 📬 Optional Postman Variables
 
-The Postman environment stores local testing values.
+If you create a Postman environment manually, these are useful local testing values.
 
 | Variable | Example | Purpose |
 | --- | --- | --- |

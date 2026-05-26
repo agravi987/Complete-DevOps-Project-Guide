@@ -66,12 +66,3 @@ Create order:
   "quantity": 2
 }
 ```
-
-## 📬 Postman Files
-
-Use these instead of creating requests manually:
-
-```text
-postman/microservices-devops-api-tests.postman_collection.json
-postman/microservices-local.postman_environment.json
-```

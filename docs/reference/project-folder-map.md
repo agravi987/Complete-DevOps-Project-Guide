@@ -48,10 +48,6 @@ microservices-project/
     init/
       01-create-tables.sql
 
-  postman/
-    microservices-devops-api-tests.postman_collection.json
-    microservices-local.postman_environment.json
-
   .github/
     workflows/
       ci.yml
@@ -71,7 +67,6 @@ microservices-project/
 | `gateway/` | Nginx reverse proxy and API entry point |
 | `services/` | All backend microservices |
 | `database/init/` | SQL scripts used when PostgreSQL starts |
-| `postman/` | Ready Postman collection and local environment |
 | `.github/workflows/` | GitHub Actions CI workflows |
 
 ## 📄 What Each Root File Means
