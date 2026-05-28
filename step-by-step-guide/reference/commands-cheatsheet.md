@@ -83,10 +83,30 @@ GET http://localhost:8080/api/products
 kubectl config use-context docker-desktop
 kubectl get nodes
 kubectl apply -f .\kubernetes\local
+kubectl wait --for=condition=available deployment --all -n microservices-local --timeout=180s
+kubectl get deployments -n microservices-local
 kubectl get pods -n microservices-local
 kubectl get svc -n microservices-local
 kubectl logs deployment/gateway -n microservices-local
 kubectl delete namespace microservices-local
+```
+
+## ☸️ Kubernetes Docker Hub Images
+
+```powershell
+$env:DOCKERHUB_USERNAME="your-dockerhub-username"
+$env:IMAGE_TAG="v1"
+docker login
+
+docker build -t "$env:DOCKERHUB_USERNAME/auth-service:$env:IMAGE_TAG" .\services\auth-service
+docker build -t "$env:DOCKERHUB_USERNAME/product-service:$env:IMAGE_TAG" .\services\product-service
+docker build -t "$env:DOCKERHUB_USERNAME/order-service:$env:IMAGE_TAG" .\services\order-service
+docker build -t "$env:DOCKERHUB_USERNAME/microservices-frontend:$env:IMAGE_TAG" .\frontend
+
+docker push "$env:DOCKERHUB_USERNAME/auth-service:$env:IMAGE_TAG"
+docker push "$env:DOCKERHUB_USERNAME/product-service:$env:IMAGE_TAG"
+docker push "$env:DOCKERHUB_USERNAME/order-service:$env:IMAGE_TAG"
+docker push "$env:DOCKERHUB_USERNAME/microservices-frontend:$env:IMAGE_TAG"
 ```
 
 ## 🐍 Python API Tests

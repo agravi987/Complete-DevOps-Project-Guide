@@ -166,15 +166,80 @@ kubectl get nodes
 
 If `docker-desktop` does not exist, enable Kubernetes in Docker Desktop settings.
 
-## ☸️ Kubernetes Pod Shows ImagePullBackOff
+## ☸️ Kubernetes Pod Shows ErrImagePull Or ImagePullBackOff
 
-Cause:
+First, find the exact pod name:
 
-Kubernetes cannot find the local image.
+```powershell
+kubectl get pods -n microservices-local
+```
 
-Fix:
+Then describe the failing pod:
 
-Build the local image with the exact name used in the manifest:
+```powershell
+kubectl describe pod <pod-name> -n microservices-local
+```
+
+Read the `Events` section at the bottom. It usually tells you which image Kubernetes failed to pull.
+
+Common causes:
+
+- The image name in the Kubernetes manifest is wrong.
+- The image tag does not exist on Docker Hub.
+- The image was built but not pushed.
+- The Docker Hub repository is private.
+- `imagePullPolicy` is set to `Never`, so Kubernetes is not allowed to pull the image.
+
+Recommended fix with Docker Hub:
+
+```powershell
+$env:DOCKERHUB_USERNAME="your-dockerhub-username"
+$env:IMAGE_TAG="v1"
+docker login
+
+docker build -t "$env:DOCKERHUB_USERNAME/auth-service:$env:IMAGE_TAG" .\services\auth-service
+docker build -t "$env:DOCKERHUB_USERNAME/product-service:$env:IMAGE_TAG" .\services\product-service
+docker build -t "$env:DOCKERHUB_USERNAME/order-service:$env:IMAGE_TAG" .\services\order-service
+docker build -t "$env:DOCKERHUB_USERNAME/microservices-frontend:$env:IMAGE_TAG" .\frontend
+
+docker push "$env:DOCKERHUB_USERNAME/auth-service:$env:IMAGE_TAG"
+docker push "$env:DOCKERHUB_USERNAME/product-service:$env:IMAGE_TAG"
+docker push "$env:DOCKERHUB_USERNAME/order-service:$env:IMAGE_TAG"
+docker push "$env:DOCKERHUB_USERNAME/microservices-frontend:$env:IMAGE_TAG"
+```
+
+Update the app images in:
+
+```text
+kubernetes/local/04-backend-services.yaml
+kubernetes/local/05-frontend-and-gateway.yaml
+```
+
+Use Docker Hub image names:
+
+```yaml
+image: your-dockerhub-username/auth-service:v1
+imagePullPolicy: IfNotPresent
+```
+
+Do the same for `product-service`, `order-service`, and `microservices-frontend`.
+
+Apply again:
+
+```powershell
+kubectl apply -f .\kubernetes\local
+kubectl wait --for=condition=available deployment --all -n microservices-local --timeout=180s
+```
+
+Check that the pods recovered:
+
+```powershell
+kubectl get pods -n microservices-local
+```
+
+Optional local-only fix:
+
+If you are using Docker Desktop Kubernetes and local images only, build the local image with the exact name used in the manifest:
 
 ```powershell
 docker build -t auth-service:local .\services\auth-service
@@ -187,6 +252,9 @@ Then restart the deployment:
 
 ```powershell
 kubectl rollout restart deployment/auth-service -n microservices-local
+kubectl rollout restart deployment/product-service -n microservices-local
+kubectl rollout restart deployment/order-service -n microservices-local
+kubectl rollout restart deployment/frontend -n microservices-local
 ```
 
 ## ☸️ Kubernetes Gateway Does Not Open

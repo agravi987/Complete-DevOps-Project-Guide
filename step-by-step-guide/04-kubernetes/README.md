@@ -22,7 +22,8 @@ The local Kubernetes YAML files are here:
 Before moving to CI/CD:
 
 - `kubectl get nodes` shows `docker-desktop`.
-- Local images are built.
+- Docker Hub images are pushed, or local images are built if you choose the local-only path.
+- Kubernetes manifests use image names that match your chosen image source.
 - Pods are running in `microservices-local`.
 - Gateway works at `http://localhost:30080`.
 - You can view pod logs with `kubectl logs`.
